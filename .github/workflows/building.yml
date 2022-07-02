@@ -1,9 +1,7 @@
 name: Build project
 
-on:
-  push:
-    branches:
-      -"main"
+on: pull_request
+
 jobs:
   buildForAllSupportedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
