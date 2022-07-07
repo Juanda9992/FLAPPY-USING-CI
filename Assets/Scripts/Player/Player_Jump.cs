@@ -7,6 +7,8 @@ using UnityEngine;
 public class Player_Jump : MonoBehaviour
 {
     public delegate void onDeath();
+    public delegate void onJumped();
+    public static event onJumped onPlayerJump;
     public static event onDeath onPlayerDeath;
     private Rigidbody2D rb;
     [SerializeField]
@@ -33,6 +35,7 @@ public class Player_Jump : MonoBehaviour
     {
         if(jumping)
         {
+            onPlayerJump?.Invoke();
             jumping = false;
             rb.velocity = Vector2.up * jumpVelocity;
         }
