@@ -13,6 +13,10 @@ public class Moving_Obstacle : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(transform.position.x < -15)
+        {
+            Destroy(gameObject);
+        }
         rb.velocity = Vector2.left * 8;
     }
 }

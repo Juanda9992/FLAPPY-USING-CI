@@ -15,4 +15,6 @@ public class PlayMode
         yield return new WaitForSeconds(2);
         Assert.Less(character.transform.position.y,-6);
     }
+
+
 }
