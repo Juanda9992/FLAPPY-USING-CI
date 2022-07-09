@@ -1,4 +1,4 @@
-name: Build project
+name: Build and upload project
 
 on: pull_request
 
@@ -31,3 +31,13 @@ jobs:
         with:
           name: Build-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
+          
+                # Publish to Itch.IO
+      - uses: manleydev/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: ${{ matrix.targetPlatform }}
+          ITCH_GAME: deployexample
+          ITCH_USER: Macawls
+          PACKAGE: build/${{ matrix.targetPlatform }}
+
