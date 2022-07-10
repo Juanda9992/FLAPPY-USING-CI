@@ -38,7 +38,7 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
           CHANNEL: ${{ matrix.targetPlatform }}
-          ITCH_GAME: deployexample
-          ITCH_USER: Macawls
+          ITCH_GAME: flappyci
+          ITCH_USER: juandagames
           PACKAGE: build/${{ matrix.targetPlatform }}
 
