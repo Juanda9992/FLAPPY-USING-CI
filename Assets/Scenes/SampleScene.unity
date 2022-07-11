@@ -510,3 +510,5 @@ MonoBehaviour:
   - {fileID: 8472437481140188418, guid: 67defea8b94e7c349be4ebef4df1a445, type: 3}
   - {fileID: 5946457674375862495, guid: c77da5ec269794146b21933ffb539521, type: 3}
   timeBetweenSpawn: 2
+  currentTimeBetweenSpawn: 2
+  spawned: 0
