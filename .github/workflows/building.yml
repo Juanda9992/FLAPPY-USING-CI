@@ -1,6 +1,7 @@
-name: Build project
+name: Build and upload project
 
-on: pull_request
+on: [pull_request, workflow_dispatch]
+    
 
 jobs:
   buildForAllSupportedPlatforms:
@@ -11,6 +12,7 @@ jobs:
       matrix:
         targetPlatform:
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
+          - Android
 
     steps:
       - uses: actions/checkout@v2
@@ -31,3 +33,13 @@ jobs:
         with:
           name: Build-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
+          
+                # Publish to Itch.IO
+      - uses: manleydev/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: ${{ matrix.targetPlatform }}
+          ITCH_GAME: flappyci
+          ITCH_USER: juandagames
+          PACKAGE: build/${{ matrix.targetPlatform }}
+
