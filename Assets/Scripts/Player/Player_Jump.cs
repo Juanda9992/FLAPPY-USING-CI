@@ -8,8 +8,10 @@ public class Player_Jump : MonoBehaviour
 {
     public delegate void onDeath();
     public delegate void onJumped();
+    public delegate void onScore();
     public static event onJumped onPlayerJump;
     public static event onDeath onPlayerDeath;
+    public static event onScore onPlayerScored;
     private Rigidbody2D rb;
     [SerializeField]
     private float jumpVelocity;
@@ -56,6 +58,14 @@ public class Player_Jump : MonoBehaviour
             onPlayerDeath?.Invoke();
             resetPos();
             
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Score"))
+        {
+            onPlayerScored?.Invoke();
         }
     }
 

@@ -614,6 +614,9 @@
     <Reference Include="UnityEditor.TestRunner">
         <HintPath>C:/Users/Camilo/Desktop/JUAN/Unity 5/GAMES/FLAPPY-BIRD-USING-CI/FLAPPY USING CI/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro">
+        <HintPath>C:/Users/Camilo/Desktop/JUAN/Unity 5/GAMES/FLAPPY-BIRD-USING-CI/FLAPPY USING CI/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>C:/Users/Camilo/Desktop/JUAN/Unity 5/GAMES/FLAPPY-BIRD-USING-CI/FLAPPY USING CI/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
