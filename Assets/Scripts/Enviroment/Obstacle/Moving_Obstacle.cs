@@ -9,6 +9,7 @@ public class Moving_Obstacle : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        transform.position = new Vector2(transform.position.x,snapValue(Random.Range(-3f,3f),0.5f));
     }
 
     void FixedUpdate()
@@ -18,5 +19,10 @@ public class Moving_Obstacle : MonoBehaviour
             Destroy(gameObject);
         }
         rb.velocity = Vector2.left * 8;
+    }
+
+    private float snapValue(float value,float multipleOf)
+    {
+        return Mathf.Round(value/multipleOf) * multipleOf;  
     }
 }
