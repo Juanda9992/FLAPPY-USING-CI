@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Lethal
   - Score
+  - Portal
   layers:
   - Default
   - TransparentFX
