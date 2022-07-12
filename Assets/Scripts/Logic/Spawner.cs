@@ -10,6 +10,11 @@ public class Spawner : MonoBehaviour
     public float timeBetweenSpawn;
     public float currentTimeBetweenSpawn; 
     public bool spawned = false;
+
+    [HideInInspector]
+    public int currentNumber;
+    [HideInInspector]
+    public int lastNumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +38,9 @@ public class Spawner : MonoBehaviour
     private void Spawn()
     {
         currentTimeBetweenSpawn = timeBetweenSpawn;
-            Instantiate(obstaclePrefabs[Random.Range(0,obstaclePrefabs.Length)],transform.position,Quaternion.identity); 
+        currentNumber = GenerateNumber();
+        Instantiate(obstaclePrefabs[currentNumber],transform.position,Quaternion.identity);
+        lastNumber = currentNumber; 
     }
 
     public void checkForSpawn()
@@ -46,5 +53,35 @@ public class Spawner : MonoBehaviour
         {
             spawned = false;
         }
+    }
+
+    public int GenerateNumber(bool basedOnLenght = true)
+    {
+        if(basedOnLenght)
+        {
+            int number = Random.Range(0,obstaclePrefabs.Length);
+            if(lastNumber == 2)
+            {
+                while(number == 3 || number == 4)
+                {
+                    number = Random.Range(0,obstaclePrefabs.Length);
+                }
+            }
+            return number;
+        }
+        else    
+        {        
+            int number = Random.Range(0,8);
+            if(lastNumber == 2)
+            {
+                while(number == 3 || number == 4)
+                {
+                    number = Random.Range(0,8);
+                }
+            }
+            return number;
+        }
+
+
     }
 }
