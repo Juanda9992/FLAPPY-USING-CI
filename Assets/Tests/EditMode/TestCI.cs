@@ -50,7 +50,14 @@ public class TestCI
         _spawner1.checkForSpawn();
         Assert.IsTrue(_spawner1.spawned);
     }
-
-
-
+    [Test]
+    public void generate_number_2_then_number_3_and_4_cant_generate()
+    {
+        var spawner2 = new GameObject();
+        var _spawner2 = spawner2.AddComponent<Spawner>();
+        _spawner2.lastNumber = 2;
+        int testNumber = _spawner2.GenerateNumber(false);
+        Assert.IsTrue((testNumber != 3) && (testNumber != 4));
+        
+    }
 }
