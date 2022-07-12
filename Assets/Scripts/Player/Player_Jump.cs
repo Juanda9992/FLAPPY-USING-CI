@@ -17,9 +17,11 @@ public class Player_Jump : MonoBehaviour
     private float jumpVelocity;
     private bool jumping = false;
     private Vector2 firstPos;
+    private Gravity_Switcher gravity_Switcher;
     // Start is called before the first frame update
     void Start()
     {
+        gravity_Switcher = FindObjectOfType<Gravity_Switcher>();
         rb = GetComponent<Rigidbody2D>();
         firstPos = transform.position;
     }
@@ -39,15 +41,29 @@ public class Player_Jump : MonoBehaviour
         {
             onPlayerJump?.Invoke();
             jumping = false;
-            rb.velocity = Vector2.up * jumpVelocity;
+            rb.velocity = Vector2.up * jumpVelocity * gravity_Switcher.gravityAxis;
         }
-        if(rb.velocity.y <= 0)
+        if(gravity_Switcher.gravityAxis >0)
         {
-            rb.gravityScale = 6;
+            if(rb.velocity.y < 0)
+            {
+                rb.gravityScale = 6 * gravity_Switcher.gravityAxis;
+            }
+            else
+            {
+                rb.gravityScale = 4 * gravity_Switcher.gravityAxis;
+            } 
         }
         else
         {
-            rb.gravityScale = 4;
+            if(rb.velocity.y > 0)
+            {
+                rb.gravityScale = 6 * gravity_Switcher.gravityAxis;
+            }
+            else
+            {
+                rb.gravityScale = 4 * gravity_Switcher.gravityAxis;
+            } 
         }
     }
 
