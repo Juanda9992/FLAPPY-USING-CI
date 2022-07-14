@@ -9,7 +9,7 @@ public class Key_Obstacle : MonoBehaviour
 
     void Start()
     {
-        transform.position = new Vector2(transform.position.x,Random.Range(-5,5));
+        transform.position = new Vector2(transform.position.x,Random.Range(-4.7f,4.7f));
     }
     void OnTriggerEnter2D(Collider2D other)
     {

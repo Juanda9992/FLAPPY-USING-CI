@@ -79,6 +79,21 @@ public class Spawner : MonoBehaviour
                     number = Random.Range(0,8);
                 }
             }
+            else if(lastNumber == 7)
+            {
+                while(number == 7)
+                {
+                    number = Random.Range(0,8);
+                }
+            }
+            else if(lastNumber == 8)
+            {
+                while(number == 8)
+                {
+                    number = Random.Range(0,8);
+                }
+            }
+
             return number;
         }
 

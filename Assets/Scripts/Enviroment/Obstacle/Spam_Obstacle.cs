@@ -10,10 +10,13 @@ public class Spam_Obstacle : MonoBehaviour
     public int maxTimesToDuplicate = 10;
     [SerializeField]
     public int currentDuplicateNumber;
+    Gravity_Switcher switcher;
 
     void Start()
     {
+        switcher = GetComponent<Gravity_Switcher>();
         duplicateObstacle();
+        transform.localScale = new Vector2(transform.lossyScale.x,transform.lossyScale.y * switcher.gravityAxis);
     }
     public void duplicateObstacle()
     {
