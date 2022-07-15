@@ -14,7 +14,7 @@ public class Spam_Obstacle : MonoBehaviour
 
     void Start()
     {
-        switcher = GetComponent<Gravity_Switcher>();
+        switcher = GameObject.FindObjectOfType<Gravity_Switcher>();
         duplicateObstacle();
         transform.localScale = new Vector2(transform.lossyScale.x,transform.lossyScale.y * switcher.gravityAxis);
     }

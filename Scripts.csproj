@@ -47,6 +47,7 @@
      <Compile Include="Assets\Scripts\Enviroment\Enviroment\Gravity_Switcher.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Toggle_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Moving_Obstacle.cs" />
+     <Compile Include="Assets\Scripts\UI\GameOver_UI.cs" />
      <Compile Include="Assets\Scripts\Logic\Camera_Controller.cs" />
      <None Include="Assets\Scripts\Scripts.asmdef" />
     <Reference Include="UnityEngine">

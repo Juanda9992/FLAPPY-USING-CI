@@ -90,4 +90,14 @@ public class Player_Jump : MonoBehaviour
         transform.position = firstPos;
         rb.velocity = Vector2.zero;
     }
+
+    void OnEnable()
+    {
+        GameOver_UI.onRestart += resetPos;
+    }
+
+    void OnDisable()
+    {
+        GameOver_UI.onRestart -= resetPos;
+    }
 }
