@@ -39,6 +39,7 @@
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Spam_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Key_Obstacle.cs" />
      <Compile Include="Assets\Scripts\UI\Score_UI.cs" />
+     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Camera_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Gravity_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Player\Player_Jump.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Button_Obstacle.cs" />
@@ -46,8 +47,8 @@
      <Compile Include="Assets\Scripts\Enviroment\Enviroment\Gravity_Switcher.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Toggle_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Moving_Obstacle.cs" />
+     <Compile Include="Assets\Scripts\UI\GameOver_UI.cs" />
      <Compile Include="Assets\Scripts\Logic\Camera_Controller.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Camera_Obstacle.cs" />
      <None Include="Assets\Scripts\Scripts.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -286,20 +287,20 @@
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
         <HintPath>C:/Users/Camilo/Desktop/JUAN/Unity 5/GAMES/FLAPPY-BIRD-USING-CI/FLAPPY USING CI/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="DOTweenEditor">
+        <HintPath>C:/Users/Camilo/Desktop/JUAN/Unity 5/GAMES/FLAPPY-BIRD-USING-CI/FLAPPY USING CI/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    </Reference>
     <Reference Include="log4netPlastic">
         <HintPath>C:/Users/Camilo/Desktop/JUAN/Unity 5/GAMES/FLAPPY-BIRD-USING-CI/FLAPPY USING CI/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+        <HintPath>C:/Users/Camilo/Desktop/JUAN/Unity 5/GAMES/FLAPPY-BIRD-USING-CI/FLAPPY USING CI/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>C:/Users/Camilo/Desktop/JUAN/Unity 5/GAMES/FLAPPY-BIRD-USING-CI/FLAPPY USING CI/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
         <HintPath>C:/Users/Camilo/Desktop/JUAN/Unity 5/GAMES/FLAPPY-BIRD-USING-CI/FLAPPY USING CI/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTweenEditor">
-        <HintPath>C:/Users/Camilo/Desktop/JUAN/Unity 5/GAMES/FLAPPY-BIRD-USING-CI/FLAPPY USING CI/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-        <HintPath>C:/Users/Camilo/Desktop/JUAN/Unity 5/GAMES/FLAPPY-BIRD-USING-CI/FLAPPY USING CI/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Editor/2020.3.13f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
