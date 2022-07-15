@@ -27,8 +27,23 @@ public class Camera_Controller : MonoBehaviour
             rotated =false;
             transform.DOMoveZ(-1,0.5f);
             transform.DORotate(new Vector2(0,-360),0.7f);
-        }
-        
-        
+        } 
+    }
+
+    private void resetCamera()
+    {
+        rotated = false;
+        transform.position = new Vector3(transform.position.x, transform.position.y,-1);
+        transform.rotation = Quaternion.Euler(0,0,0);
+    }
+
+    private void OnEnable() 
+    {
+        GameOver_UI.onRestart += resetCamera;    
+    }
+
+    private void OnDisable() 
+    {
+        GameOver_UI.onRestart -= resetCamera;    
     }
 }
