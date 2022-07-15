@@ -16,15 +16,19 @@ public class Spawner : MonoBehaviour
     [HideInInspector]
     public int lastNumber;
     private bool isSpawning = true;
+    private Time_Speed_Controller timeController;
     // Start is called before the first frame update
     void Start()
     {
         currentTimeBetweenSpawn = timeBetweenSpawn / 2;
+        timeController = GameObject.FindObjectOfType<Time_Speed_Controller>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Time.timeScale);
         if(isSpawning)
         {
             if(currentTimeBetweenSpawn > 0)
@@ -84,16 +88,23 @@ public class Spawner : MonoBehaviour
                     number = Random.Range(0,8);
                 }
             }
-            else if(lastNumber == 7)
+            else if((lastNumber == 7) && (number ==7))
             {
                 while(number == 7)
                 {
                     number = Random.Range(0,8);
                 }
             }
-            else if(lastNumber == 8)
+            else if(lastNumber == 8 && (number == lastNumber))
             {
                 while(number == 8)
+                {
+                    number = Random.Range(0,8);
+                }
+            }
+            else if(lastNumber == 9)
+            {
+                while((number == 9) && (Time.timeScale != 1))
                 {
                     number = Random.Range(0,8);
                 }

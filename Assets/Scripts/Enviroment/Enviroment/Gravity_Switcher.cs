@@ -12,6 +12,21 @@ public class Gravity_Switcher : MonoBehaviour
         gravityAxis *= -1;
     }
 
+    private void ResetGravity()
+    {
+        gravityAxis = 1;
+    }
+
+    void OnEnable()
+    {
+        GameOver_UI.onRestart += ResetGravity;
+    }
+    void OnDisable()
+    {
+        GameOver_UI.onRestart -= ResetGravity;
+    }
+    
+
 
 
 }

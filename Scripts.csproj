@@ -49,6 +49,8 @@
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Moving_Obstacle.cs" />
      <Compile Include="Assets\Scripts\UI\GameOver_UI.cs" />
      <Compile Include="Assets\Scripts\Logic\Camera_Controller.cs" />
+     <Compile Include="Assets\Scripts\Logic\Time_Speed_Controller.cs" />
+     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Time_Speed_Obstacle.cs" />
      <None Include="Assets\Scripts\Scripts.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

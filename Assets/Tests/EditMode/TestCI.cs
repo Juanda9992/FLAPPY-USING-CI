@@ -60,4 +60,20 @@ public class TestCI
         Assert.IsTrue((testNumber != 3) && (testNumber != 4));
         
     }
+
+    [Test]
+    [TestCase(1)]
+    [TestCase(2)]
+    [TestCase(3)]
+    [TestCase(4)]
+    [TestCase(5)]
+    public void more_than_3_obstacles_time_not_one(int number)
+    { 
+        var timerObj = new GameObject();
+        var timer = timerObj.AddComponent<Time_Speed_Controller>();
+        timer.changeSpeed(true);
+        timer.currentObstaclesRemain = number;
+        timer.DecreaseTime();
+        Assert.AreNotEqual(Time.deltaTime,1);
+    }
 }
