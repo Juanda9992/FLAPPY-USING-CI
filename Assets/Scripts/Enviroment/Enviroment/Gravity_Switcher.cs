@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Gravity_Switcher : MonoBehaviour
 {
+    public delegate void onGravityChanged();
+    public static event onGravityChanged onChangeGravity;
     public int gravityAxis = 1;
     public bool switched = false;
 
     public void FlipGravity()
     {
         gravityAxis *= -1;
+        onChangeGravity?.Invoke();
     }
 
     private void ResetGravity()

@@ -9,7 +9,7 @@ public class Moving_Obstacle : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        transform.position = new Vector2(transform.position.x,snapValue(Random.Range(-2.8f,2.8f),0.25f));
+        transform.position = new Vector2(transform.position.x,snapValue(Random.Range(-3f,3f),1));
     }
 
     void FixedUpdate()

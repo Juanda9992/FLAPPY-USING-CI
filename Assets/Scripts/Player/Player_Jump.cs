@@ -18,9 +18,12 @@ public class Player_Jump : MonoBehaviour
     private bool jumping = false;
     private Vector2 firstPos;
     private Gravity_Switcher gravity_Switcher;
+
+    private SpriteRenderer sRenderer;
     // Start is called before the first frame update
     void Start()
     {
+        sRenderer = GetComponent<SpriteRenderer>();
         gravity_Switcher = FindObjectOfType<Gravity_Switcher>();
         rb = GetComponent<Rigidbody2D>();
         firstPos = transform.position;
@@ -91,13 +94,20 @@ public class Player_Jump : MonoBehaviour
         rb.velocity = Vector2.zero;
     }
 
+    private void flipSprite()
+    {
+        sRenderer.flipY = true;
+    }
+
     void OnEnable()
     {
         GameOver_UI.onRestart += resetPos;
+        Gravity_Switcher.onChangeGravity += flipSprite;
     }
 
     void OnDisable()
     {
+        Gravity_Switcher.onChangeGravity -= flipSprite;
         GameOver_UI.onRestart -= resetPos;
     }
 }

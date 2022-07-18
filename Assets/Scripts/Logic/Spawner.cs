@@ -85,28 +85,28 @@ public class Spawner : MonoBehaviour
             {
                 while(number == 3 || number == 4)
                 {
-                    number = Random.Range(0,8);
+                    number = Random.Range(0,obstaclePrefabs.Length);
                 }
             }
             else if((lastNumber == 7) && (number ==7))
             {
                 while(number == 7)
                 {
-                    number = Random.Range(0,8);
+                    number = Random.Range(0,obstaclePrefabs.Length);
                 }
             }
             else if(lastNumber == 8 && (number == lastNumber))
             {
                 while(number == 8)
                 {
-                    number = Random.Range(0,8);
+                    number = Random.Range(0,obstaclePrefabs.Length);
                 }
             }
             else if(lastNumber == 9)
             {
                 while((number == 9) && (Time.timeScale != 1))
                 {
-                    number = Random.Range(0,8);
+                    number = Random.Range(0,obstaclePrefabs.Length);
                 }
             }
 
