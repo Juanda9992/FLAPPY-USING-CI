@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -44,6 +45,7 @@ public class Player_Jump : MonoBehaviour
         {
             onPlayerJump?.Invoke();
             jumping = false;
+            transform.DOShakeScale(0.1f,0.5f);
             rb.velocity = Vector2.up * jumpVelocity * gravity_Switcher.gravityAxis;
         }
         if(gravity_Switcher.gravityAxis >0)
@@ -88,7 +90,7 @@ public class Player_Jump : MonoBehaviour
         }
     }
 
-    private void resetPos()
+    public void resetPos()
     {
         transform.position = firstPos;
         rb.velocity = Vector2.zero;
