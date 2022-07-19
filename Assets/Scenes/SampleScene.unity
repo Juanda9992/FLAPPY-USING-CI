@@ -254,6 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 309420074}
   - component: {fileID: 309420075}
+  - component: {fileID: 309420076}
   m_Layer: 0
   m_Name: DESERT_BACKGROUND (2)
   m_TagString: Untagged
@@ -269,7 +270,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309420073}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.75, y: -0.39, z: 0}
+  m_LocalPosition: {x: 56.5, y: -0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1202375831}
@@ -315,7 +316,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -20
-  m_Sprite: {fileID: 21300000, guid: 2c5c8372ddcd0d54c9d6fcf2b0d4ca82, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 585f476ae85e57349afc31a4784d249b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -326,6 +327,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &309420076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309420073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151ec0e1f6d783c4d848dc3af900059d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  minX: -30
+  xMovement: 85
 --- !u!1 &395246215
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,7 +472,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &395246220
 MonoBehaviour:
@@ -1007,7 +1023,7 @@ RectTransform:
   - {fileID: 972862466}
   - {fileID: 836826633}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1406,7 +1422,7 @@ Transform:
   - {fileID: 1966023179}
   - {fileID: 309420074}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1244353802
 GameObject:
@@ -2360,7 +2376,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1381134508
 MonoBehaviour:
@@ -2385,6 +2401,7 @@ MonoBehaviour:
   - {fileID: 4314861393131942943, guid: 920ba2da7bd75da4890c7965f569e1ce, type: 3}
   - {fileID: 1142873051884227730, guid: 5caae771f1f79124d9003616a79709b4, type: 3}
   - {fileID: 2100368280149842534, guid: 4fe0dc8660bd1054a8213ac5a1506dee, type: 3}
+  - {fileID: 2765052568937577667, guid: 6ee76f351132598408ade1de262ede81, type: 3}
   timeBetweenSpawn: 1.8
   currentTimeBetweenSpawn: 2
   spawned: 0
@@ -2475,6 +2492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1507927568}
   - component: {fileID: 1507927569}
+  - component: {fileID: 1507927570}
   m_Layer: 0
   m_Name: DESERT_BACKGROUND
   m_TagString: Untagged
@@ -2536,7 +2554,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -20
-  m_Sprite: {fileID: 21300000, guid: 2c5c8372ddcd0d54c9d6fcf2b0d4ca82, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 585f476ae85e57349afc31a4784d249b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2547,63 +2565,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1705493333
-PrefabInstance:
+--- !u!114 &1507927570
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1971921176259187303, guid: 948e0dad94b81004cb8ed260b04f4ba3, type: 3}
-      propertyPath: m_Name
-      value: Obstacle_Container3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971921176259187354, guid: 948e0dad94b81004cb8ed260b04f4ba3, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971921176259187354, guid: 948e0dad94b81004cb8ed260b04f4ba3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.061552
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971921176259187354, guid: 948e0dad94b81004cb8ed260b04f4ba3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.6863241
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971921176259187354, guid: 948e0dad94b81004cb8ed260b04f4ba3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971921176259187354, guid: 948e0dad94b81004cb8ed260b04f4ba3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971921176259187354, guid: 948e0dad94b81004cb8ed260b04f4ba3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971921176259187354, guid: 948e0dad94b81004cb8ed260b04f4ba3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971921176259187354, guid: 948e0dad94b81004cb8ed260b04f4ba3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971921176259187354, guid: 948e0dad94b81004cb8ed260b04f4ba3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971921176259187354, guid: 948e0dad94b81004cb8ed260b04f4ba3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1971921176259187354, guid: 948e0dad94b81004cb8ed260b04f4ba3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 948e0dad94b81004cb8ed260b04f4ba3, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507927567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151ec0e1f6d783c4d848dc3af900059d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  minX: -30
+  xMovement: 85
 --- !u!1 &1715888643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2857,7 +2833,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1847239978
 MonoBehaviour:
@@ -2885,6 +2861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1966023179}
   - component: {fileID: 1966023180}
+  - component: {fileID: 1966023181}
   m_Layer: 0
   m_Name: DESERT_BACKGROUND (1)
   m_TagString: Untagged
@@ -2946,7 +2923,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -20
-  m_Sprite: {fileID: 21300000, guid: 2c5c8372ddcd0d54c9d6fcf2b0d4ca82, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 585f476ae85e57349afc31a4784d249b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2957,6 +2934,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1966023181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966023178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151ec0e1f6d783c4d848dc3af900059d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  minX: -30
+  xMovement: 85
 --- !u!1 &2047949019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2999,7 +2991,7 @@ Transform:
   m_Children:
   - {fileID: 1255066047}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2129274854
 GameObject:
@@ -3065,5 +3057,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

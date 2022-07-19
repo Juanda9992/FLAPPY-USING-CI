@@ -37,6 +37,11 @@ public class Player_Jump : MonoBehaviour
         {
             jumping = true;
         }
+
+        if(transform.position.x < -14)
+        {
+            Death();
+        }
     }
 
     void FixedUpdate()
@@ -76,10 +81,15 @@ public class Player_Jump : MonoBehaviour
     {
         if(other.transform.CompareTag("Lethal"))
         {
-            onPlayerDeath?.Invoke();
-            resetPos();
-            
+            Death();
         }
+    }
+
+    private void Death()
+    {
+        onPlayerDeath?.Invoke();
+        resetPos();
+            
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -94,11 +104,19 @@ public class Player_Jump : MonoBehaviour
     {
         transform.position = firstPos;
         rb.velocity = Vector2.zero;
+        sRenderer.flipY = false;
     }
 
     private void flipSprite()
     {
-        sRenderer.flipY = true;
+        if(gravity_Switcher.gravityAxis > 0)
+        {
+            sRenderer.flipY = false;
+        }
+        else
+        {
+            sRenderer.flipY = true;
+        }
     }
 
     void OnEnable()
