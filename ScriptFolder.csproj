@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Revert_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Logic\Time_Speed_Controller.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Spam_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Key_Obstacle.cs" />
@@ -47,12 +48,11 @@
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Time_Speed_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Logic\Spawner.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Enviroment\Gravity_Switcher.cs" />
+     <Compile Include="Assets\Scripts\Enviroment\Background\Background_Movement.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Toggle_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Moving_Obstacle.cs" />
      <Compile Include="Assets\Scripts\UI\GameOver_UI.cs" />
      <Compile Include="Assets\Scripts\Logic\Camera_Controller.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Background\Background_Movement.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Revert_Obstacle.cs" />
      <None Include="Assets\Scripts\ScriptFolder.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

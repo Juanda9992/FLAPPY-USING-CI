@@ -137,9 +137,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5203937068395131818}
   - component: {fileID: 5203937068395131816}
-  - component: {fileID: 5203937068395131819}
   - component: {fileID: 5203937068395131814}
   - component: {fileID: 5203937068395131820}
+  - component: {fileID: 8593177824400967442}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -156,7 +156,7 @@ Transform:
   m_GameObject: {fileID: 5203937068395131821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.6, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1142873051884227741}
   m_RootOrder: 1
@@ -201,8 +201,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 1, g: 0.7210716, b: 0, a: 1}
+  m_Sprite: {fileID: -6342314525090208726, guid: a76276e59beeb8349b13cdd1f42f9566, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -212,22 +212,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &5203937068395131819
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5203937068395131821}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
 --- !u!50 &5203937068395131814
 Rigidbody2D:
   serializedVersion: 4
@@ -261,6 +245,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6da6cd035d1d3499b187e0ae5809eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalSprite: {fileID: -342434113755325934, guid: a76276e59beeb8349b13cdd1f42f9566, type: 3}
+  toggleSprite: {fileID: -6342314525090208726, guid: a76276e59beeb8349b13cdd1f42f9566, type: 3}
+--- !u!58 &8593177824400967442
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5203937068395131821}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.0333333
 --- !u!1 &8061680706711769555
 GameObject:
   m_ObjectHideFlags: 0

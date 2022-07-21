@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Button_Obstacle : MonoBehaviour
 {
+    [SerializeField] private Color pressedColor;
+    private SpriteRenderer sRenderer;
     [SerializeField]
     private GameObject door;
     private bool inTrigger = false;
     private void Start()
     {
+        sRenderer = GetComponent<SpriteRenderer>();
         transform.position = new Vector2(transform.position.x,Random.Range(-4.7f,4.7f));
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -31,6 +34,7 @@ public class Button_Obstacle : MonoBehaviour
         if(inTrigger)
         {
             door.SetActive(false);
+            sRenderer.color = pressedColor;
         }    
     }
 

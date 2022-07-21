@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Gravity_Obstacle : MonoBehaviour
 {
+    [SerializeField]
+    private Sprite invertGravitySprite, normalGravitySprite;
     private Gravity_Switcher switcher;
     private SpriteRenderer sRenderer;
     // Start is called before the first frame update
@@ -26,11 +28,11 @@ public class Gravity_Obstacle : MonoBehaviour
         }
         if(switcher.switched)
         {
-            sRenderer.color = Color.blue;
+            sRenderer.sprite = normalGravitySprite;
         }
         else
         {
-            sRenderer.color = Color.yellow;
+            sRenderer.sprite = invertGravitySprite;
         }
     }
 

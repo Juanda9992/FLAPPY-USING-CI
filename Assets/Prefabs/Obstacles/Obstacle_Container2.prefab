@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2acc416402615b4f84530a3885ea521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggleWall: {fileID: 6860178148614016985}
+  toggleWall: {fileID: 3960590561661554804}
 --- !u!50 &6860178147225563162
 Rigidbody2D:
   serializedVersion: 4
@@ -209,6 +209,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6860178147225563163}
     m_Modifications:
+    - target: {fileID: 2206584032919107745, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8601237507069323011, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -259,14 +263,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
---- !u!1 &6860178148614016985 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8601237507069323020, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
-  m_PrefabInstance: {fileID: 2912004169334991061}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6860178148614016982 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8601237507069323011, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
+  m_PrefabInstance: {fileID: 2912004169334991061}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3960590561661554804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2206584032919107745, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
   m_PrefabInstance: {fileID: 2912004169334991061}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6105714807444675806

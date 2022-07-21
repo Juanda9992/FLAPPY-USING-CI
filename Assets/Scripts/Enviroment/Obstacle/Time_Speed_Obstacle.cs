@@ -5,6 +5,8 @@ using UnityEngine;
 public class Time_Speed_Obstacle : MonoBehaviour
 {
     private Time_Speed_Controller time_Speed;
+    [SerializeField]
+    private Sprite slowSprite, fastSprite;
     private bool fast = false;
     private SpriteRenderer sRenderer;
     // Start is called before the first frame update
@@ -13,7 +15,7 @@ public class Time_Speed_Obstacle : MonoBehaviour
         sRenderer = GetComponent<SpriteRenderer>();
         time_Speed = GameObject.FindObjectOfType<Time_Speed_Controller>();
         setSpeed();
-        updateColor();
+        updateSprite();
     }
 
 
@@ -37,15 +39,15 @@ public class Time_Speed_Obstacle : MonoBehaviour
         }
     }
 
-    private void updateColor()
+    private void updateSprite()
     {
         if(fast)
         {
-            sRenderer.color = Color.red;
+            sRenderer.sprite = fastSprite;
         }
         else
         {
-            sRenderer.color = Color.cyan;
+            sRenderer.sprite = slowSprite;
         }
     }
 }

@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d8d1c988433b940a829420fc011771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 8785523122764894964}
+  door: {fileID: 1166033420597513561}
 --- !u!50 &4255450194989319747
 Rigidbody2D:
   serializedVersion: 4
@@ -319,14 +319,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
---- !u!1 &8785523122764894964 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8601237507069323020, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
-  m_PrefabInstance: {fileID: 1058848713512056312}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8785523122764894971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8601237507069323011, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
+  m_PrefabInstance: {fileID: 1058848713512056312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1166033420597513561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2206584032919107745, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
   m_PrefabInstance: {fileID: 1058848713512056312}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5682908539198438405

@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Camera_Obstacle : MonoBehaviour
 {
-    SpriteRenderer sRenderer;
-    Camera_Controller controller;
-    void Start()
+    private SpriteRenderer sRenderer;
+
+    [SerializeField] private Sprite normalSprite,toggleSprite;
+    
+    private Camera_Controller controller;
+    private void Start()
     {
         sRenderer = GetComponent<SpriteRenderer>();
         controller = GameObject.FindObjectOfType<Camera_Controller>(); 
         UpdateStats();
     }
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
@@ -24,11 +27,11 @@ public class Camera_Obstacle : MonoBehaviour
     {
         if(!controller.rotated)
         {
-            sRenderer.color = Color.magenta;
+            sRenderer.sprite = toggleSprite;
         }
         else
         {
-            sRenderer.color = Color.cyan;
+            sRenderer.sprite = normalSprite;
         }
     }
 }
