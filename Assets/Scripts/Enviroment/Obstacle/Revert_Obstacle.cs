@@ -14,7 +14,7 @@ public class Revert_Obstacle : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            player.resetPos();
+            player.transform.position = new Vector2(0, player.transform.position.y);
         }
     }
 }
