@@ -104,7 +104,7 @@ public class Spawner : MonoBehaviour
             }
             else if(lastNumber == 9)
             {
-                while((number == 9) && (Time.timeScale != 1))
+                while((number == 9) && (Time.timeScale == 1))
                 {
                     number = Random.Range(0,obstaclePrefabs.Length);
                 }

@@ -15,9 +15,10 @@ public class Gravity_Switcher : MonoBehaviour
         onChangeGravity?.Invoke();
     }
 
-    private void ResetGravity()
+    public void ResetGravity()
     {
         gravityAxis = 1;
+        onChangeGravity?.Invoke();
     }
 
     void OnEnable()

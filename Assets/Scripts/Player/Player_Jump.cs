@@ -50,7 +50,7 @@ public class Player_Jump : MonoBehaviour
         {
             onPlayerJump?.Invoke();
             jumping = false;
-            transform.DOShakeScale(0.1f,0.5f);
+            transform.DOShakeScale(0.1f,0.5f).OnComplete(()=> transform.localScale = Vector2.one);
             rb.velocity = Vector2.up * jumpVelocity * gravity_Switcher.gravityAxis;
         }
         if(gravity_Switcher.gravityAxis >0)

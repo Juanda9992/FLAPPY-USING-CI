@@ -25,4 +25,18 @@ public class Moving_Obstacle : MonoBehaviour
     {
         return Mathf.Round(value/multipleOf) * multipleOf;  
     }
+    private void DestroyObstacle()
+    {
+        Destroy(this.gameObject);
+    }
+
+    void OnEnable()
+    {
+        GameOver_UI.onRestart += DestroyObstacle;
+    }
+
+    void OnDisable()
+    {
+        GameOver_UI.onRestart -= DestroyObstacle;
+    }
 }
