@@ -11,7 +11,6 @@ public class Time_Speed_Controller : MonoBehaviour
 
     [SerializeField]
     private int obstaclesToRevertTime;
-    [HideInInspector]
     public int currentObstaclesRemain;
 
     private void Start() 
@@ -31,7 +30,7 @@ public class Time_Speed_Controller : MonoBehaviour
         }
     }
 
-    private void ResetTime()
+    public void ResetTime()
     {
         currentObstaclesRemain = obstaclesToRevertTime;
         Time.timeScale = 1;
@@ -39,14 +38,18 @@ public class Time_Speed_Controller : MonoBehaviour
 
     public void DecreaseTime()
     {
-        if(currentObstaclesRemain > 0)
+        if(Time.timeScale != 1)
         {
-            currentObstaclesRemain--;
+            if(currentObstaclesRemain > 0)
+            {
+                currentObstaclesRemain--;
+            }
+            else
+            {
+                ResetTime();
+            }
         }
-        else
-        {
-            ResetTime();
-        }
+
     }
 
     void OnEnable()
