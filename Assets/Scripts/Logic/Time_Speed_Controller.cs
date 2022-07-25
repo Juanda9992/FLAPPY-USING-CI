@@ -13,6 +13,7 @@ public class Time_Speed_Controller : MonoBehaviour
     private int obstaclesToRevertTime;
     public int currentObstaclesRemain;
 
+
     private void Start() 
     {
         Time.timeScale = 1;

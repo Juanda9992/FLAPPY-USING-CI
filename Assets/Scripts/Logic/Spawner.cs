@@ -28,7 +28,6 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Time.timeScale);
         if(isSpawning)
         {
             if(currentTimeBetweenSpawn > 0)
