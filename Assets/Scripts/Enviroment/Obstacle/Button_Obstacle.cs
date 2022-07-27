@@ -12,7 +12,7 @@ public class Button_Obstacle : MonoBehaviour
     private void Start()
     {
         sRenderer = GetComponent<SpriteRenderer>();
-        transform.position = new Vector2(transform.position.x,Random.Range(-4.7f,4.7f));
+        transform.position = new Vector2(transform.position.x,Random.Range(-4.6f,4.6f));
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
