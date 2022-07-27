@@ -39,4 +39,5 @@ public class Moving_Obstacle : MonoBehaviour
     {
         GameOver_UI.onRestart -= DestroyObstacle;
     }
+
 }

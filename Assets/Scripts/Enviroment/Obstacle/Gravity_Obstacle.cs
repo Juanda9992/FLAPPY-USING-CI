@@ -35,7 +35,6 @@ public class Gravity_Obstacle : MonoBehaviour
             sRenderer.sprite = invertGravitySprite;
         }
     }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
