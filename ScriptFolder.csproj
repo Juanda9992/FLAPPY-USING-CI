@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Power_Up_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Logic\Camera_Controller.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Hearth_power_Up.cs" />
+     <Compile Include="Assets\Scripts\UI\Icon_Selection_Menu\Sprite_Changer.cs" />
      <None Include="Assets\Scripts\ScriptFolder.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
