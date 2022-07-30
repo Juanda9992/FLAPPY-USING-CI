@@ -20,6 +20,8 @@ public class Player_Jump : MonoBehaviour
     private Vector2 firstPos;
     private Gravity_Switcher gravity_Switcher;
 
+    public int health = 1;
+
     private SpriteRenderer sRenderer;
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,7 @@ public class Player_Jump : MonoBehaviour
         gravity_Switcher = FindObjectOfType<Gravity_Switcher>();
         rb = GetComponent<Rigidbody2D>();
         firstPos = transform.position;
+        sRenderer.sprite = GetSprite();
     }
 
     // Update is called once per frame
@@ -42,6 +45,7 @@ public class Player_Jump : MonoBehaviour
         {
             Death();
         }
+
     }
 
     void FixedUpdate()
@@ -77,11 +81,23 @@ public class Player_Jump : MonoBehaviour
         }
     }
 
+    private Sprite GetSprite()
+    {
+        return Sprite_Holder.sprite_Holder_inst.currentSprite;
+    }
     void OnCollisionEnter2D(Collision2D other)
     {
         if(other.transform.CompareTag("Lethal"))
         {
-            Death();
+            health --;
+            if(health <= 0)
+            {
+                Death();
+            }
+            else
+            {
+                resetPos();
+            }
         }
     }
 
@@ -96,7 +112,7 @@ public class Player_Jump : MonoBehaviour
     {
         if(other.CompareTag("Score"))
         {
-            onPlayerScored?.Invoke();
+            IncreaseScore();
         }
     }
 
@@ -106,7 +122,11 @@ public class Player_Jump : MonoBehaviour
         rb.velocity = Vector2.zero;
         sRenderer.flipY = false;
     }
-
+    
+    public void IncreaseScore()
+    {
+        onPlayerScored?.Invoke();
+    }
     private void flipSprite()
     {
         if(gravity_Switcher.gravityAxis > 0)
