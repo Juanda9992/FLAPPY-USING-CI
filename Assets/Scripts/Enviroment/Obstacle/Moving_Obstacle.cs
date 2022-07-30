@@ -14,7 +14,7 @@ public class Moving_Obstacle : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(transform.position.x < -15)
+        if(transform.position.x < -20)
         {
             Destroy(gameObject);
         }

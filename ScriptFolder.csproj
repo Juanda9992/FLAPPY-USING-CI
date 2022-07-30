@@ -44,7 +44,9 @@
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Key_Obstacle.cs" />
      <Compile Include="Assets\Scripts\UI\Score_UI.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Camera_Obstacle.cs" />
+     <Compile Include="Assets\Scripts\Logic\Scene_Loader.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Gravity_Obstacle.cs" />
+     <Compile Include="Assets\Scripts\UI\Icon_Selection_Menu\Sprite_Changer.cs" />
      <Compile Include="Assets\Scripts\Player\Player_Shoot.cs" />
      <Compile Include="Assets\Scripts\Player\Player_Jump.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Button_Obstacle.cs" />
@@ -53,6 +55,7 @@
      <Compile Include="Assets\Scripts\Power_Ups\Bullet_Power_Up.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Enviroment\Gravity_Switcher.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Background\Background_Movement.cs" />
+     <Compile Include="Assets\Scripts\UI\Icon_Selection_Menu\Sprite_Holder.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IPickable.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Toggle_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Moving_Obstacle.cs" />
@@ -60,7 +63,6 @@
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Power_Up_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Logic\Camera_Controller.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Hearth_power_Up.cs" />
-     <Compile Include="Assets\Scripts\UI\Icon_Selection_Menu\Sprite_Changer.cs" />
      <None Include="Assets\Scripts\ScriptFolder.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
