@@ -40,6 +40,7 @@
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Revert_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Logic\Time_Speed_Controller.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Main_Menu\Open_Link.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Spam_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Key_Obstacle.cs" />
      <Compile Include="Assets\Scripts\UI\Score_UI.cs" />
