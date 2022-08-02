@@ -591,8 +591,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 653770094}
-        m_TargetAssemblyTypeName: Scene_Loader, ScriptFolder
+      - m_Target: {fileID: 1061376230}
+        m_TargetAssemblyTypeName: Button_UI_Script, ScriptFolder
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -600,7 +600,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SampleScene
+          m_StringArgument: Main_Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &235082872
@@ -1440,6 +1440,7 @@ GameObject:
   - component: {fileID: 1061376229}
   - component: {fileID: 1061376228}
   - component: {fileID: 1061376227}
+  - component: {fileID: 1061376230}
   m_Layer: 0
   m_Name: CurrentSprite
   m_TagString: Untagged
@@ -1460,6 +1461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sRenderer: {fileID: 0}
+  defaultSprite: {fileID: 0}
 --- !u!212 &1061376228
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1525,6 +1527,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1061376230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061376226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b95b6a3b7cb5df4c95eb9705345bab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1079009152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,7 +1749,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &1146015678
 RectTransform:
@@ -1987,6 +2001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSprite: {fileID: 0}
+  avaliableSprites: []
 --- !u!4 &2027352642
 Transform:
   m_ObjectHideFlags: 0

@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-
-
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player_Jump : MonoBehaviour
 {
@@ -36,7 +34,8 @@ public class Player_Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        Debug.Log(onPlayerJump);
+        if(Input.GetKeyDown(KeyCode.Space)|| Input.GetMouseButtonDown(0) )
         {
             jumping = true;
         }

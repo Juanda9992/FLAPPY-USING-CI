@@ -15,6 +15,11 @@ public class Player_Shoot : MonoBehaviour
         }       
     }
 
+    private void ResetAmmo()
+    {
+        ammo = 0;
+    }
+
     private void Shoot()
     {
         ammo --;
@@ -28,5 +33,15 @@ public class Player_Shoot : MonoBehaviour
             
             pickable.OnPicked();
         }
+    }   
+
+    void OnEnable()
+    {
+        Player_Jump.onPlayerDeath += ResetAmmo;
+    }
+
+    void OnDisable()
+    {
+        Player_Jump.onPlayerDeath -= ResetAmmo;
     }
 }
