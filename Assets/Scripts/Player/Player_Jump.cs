@@ -34,7 +34,6 @@ public class Player_Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(onPlayerJump);
         if(Input.GetKeyDown(KeyCode.Space)|| Input.GetMouseButtonDown(0) )
         {
             jumping = true;

@@ -1268,8 +1268,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 516064018}
-        m_TargetAssemblyTypeName: Open_Link, ScriptFolder
+      - m_Target: {fileID: 516064020}
+        m_TargetAssemblyTypeName: Button_UI_Script, ScriptFolder
         m_MethodName: OpenLink
         m_Mode: 5
         m_Arguments:
@@ -2330,6 +2330,7 @@ GameObject:
   - component: {fileID: 922781214}
   - component: {fileID: 922781213}
   - component: {fileID: 922781217}
+  - component: {fileID: 922781218}
   m_Layer: 5
   m_Name: Fade_Canvas
   m_TagString: Untagged
@@ -2396,7 +2397,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &922781216
 RectTransform:
@@ -2431,6 +2432,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1184145296}
+--- !u!114 &922781218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922781212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d9ded17d1729f4daba9de228f2371c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1025289387
 GameObject:
   m_ObjectHideFlags: 0
@@ -3098,8 +3111,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 516064018}
-        m_TargetAssemblyTypeName: Open_Link, ScriptFolder
+      - m_Target: {fileID: 516064020}
+        m_TargetAssemblyTypeName: Button_UI_Script, ScriptFolder
         m_MethodName: OpenLink
         m_Mode: 5
         m_Arguments:
@@ -3484,8 +3497,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 516064018}
-        m_TargetAssemblyTypeName: Open_Link, ScriptFolder
+      - m_Target: {fileID: 516064020}
+        m_TargetAssemblyTypeName: Button_UI_Script, ScriptFolder
         m_MethodName: OpenLink
         m_Mode: 5
         m_Arguments:

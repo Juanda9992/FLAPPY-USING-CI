@@ -5,8 +5,8 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "Unity.TextMeshPro",
-        "ScriptFolder",
-        "DOTween.Modules"
+        "DOTween.Modules",
+        "ScriptFolder"
     ],
     "includePlatforms": [
         "Editor"
