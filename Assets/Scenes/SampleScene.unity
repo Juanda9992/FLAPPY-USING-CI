@@ -1428,8 +1428,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1847239980}
-        m_TargetAssemblyTypeName: Scene_Loader, ScriptFolder
+      - m_Target: {fileID: 1847239981}
+        m_TargetAssemblyTypeName: Button_UI_Script, ScriptFolder
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -1437,7 +1437,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Icon_Selection
+          m_StringArgument: Main_Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &230859883
@@ -12473,6 +12473,7 @@ GameObject:
   - component: {fileID: 1847239978}
   - component: {fileID: 1847239979}
   - component: {fileID: 1847239980}
+  - component: {fileID: 1847239981}
   m_Layer: 0
   m_Name: Main
   m_TagString: Untagged
@@ -12548,6 +12549,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 265629cb74c3ef2488fc5036c5727f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1847239981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847239975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b95b6a3b7cb5df4c95eb9705345bab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1858485814
@@ -12999,7 +13012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
+  m_sendNavigationEvents: 0
   m_DragThreshold: 10
 --- !u!4 &2129274857
 Transform:

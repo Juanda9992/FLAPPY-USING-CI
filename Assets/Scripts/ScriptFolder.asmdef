@@ -2,7 +2,8 @@
     "name": "ScriptFolder",
     "rootNamespace": "",
     "references": [
-        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:8c59ba813c75d7d4bb3920d38461a202"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

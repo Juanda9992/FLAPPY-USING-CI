@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{904d8987-5b41-0980-f68f-5f971ba3789a}</ProjectGuid>
+    <ProjectGuid>{5719bcde-417d-cd39-4571-1b3f7b0f5cf8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>ScriptFolder</AssemblyName>
+    <AssemblyName>DOTween.Modules</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -36,36 +36,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Logic\Pause_Manager.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Revert_Obstacle.cs" />
-     <Compile Include="Assets\Scripts\Logic\Time_Speed_Controller.cs" />
-     <Compile Include="Assets\Scripts\Power_Ups\Bullet.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Spam_Obstacle.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Key_Obstacle.cs" />
-     <Compile Include="Assets\Scripts\UI\Score_UI.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Camera_Obstacle.cs" />
-     <Compile Include="Assets\Scripts\Logic\Scene_Loader.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Gravity_Obstacle.cs" />
-     <Compile Include="Assets\Scripts\UI\Icon_Selection_Menu\Sprite_Changer.cs" />
-     <Compile Include="Assets\Scripts\Player\Player_Shoot.cs" />
-     <Compile Include="Assets\Scripts\Player\Player_Jump.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Button_Obstacle.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Time_Speed_Obstacle.cs" />
-     <Compile Include="Assets\Scripts\Logic\Spawner.cs" />
-     <Compile Include="Assets\Scripts\Power_Ups\Bullet_Power_Up.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Enviroment\Gravity_Switcher.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Background\Background_Movement.cs" />
-     <Compile Include="Assets\Scripts\UI\Icon_Selection_Menu\Sprite_Holder.cs" />
-     <Compile Include="Assets\Scripts\Interfaces\IPickable.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Toggle_Obstacle.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Moving_Obstacle.cs" />
-     <Compile Include="Assets\Scripts\UI\GameOver_UI.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Power_Up_Obstacle.cs" />
-     <Compile Include="Assets\Scripts\Logic\Camera_Controller.cs" />
-     <Compile Include="Assets\Scripts\UI\Fade_Canvas.cs" />
-     <Compile Include="Assets\Scripts\Power_Ups\Hearth_power_Up.cs" />
-     <Compile Include="Assets\Scripts\UI\Button_UI_Script.cs" />
-     <None Include="Assets\Scripts\ScriptFolder.asmdef" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <None Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTween.Modules.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -663,9 +642,6 @@
     <Reference Include="System.Xml.Serialization">
         <HintPath>C:/Program Files/Unity/Editor/2020.3.13f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:/Users/Camilo/Desktop/JUAN/Unity 5/GAMES/FLAPPY-BIRD-USING-CI/FLAPPY USING CI/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>C:/Users/Camilo/Desktop/JUAN/Unity 5/GAMES/FLAPPY-BIRD-USING-CI/FLAPPY USING CI/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -674,10 +650,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="DOTween.Modules.csproj">
-      <Project>{5719bcde-417d-cd39-4571-1b3f7b0f5cf8}</Project>
-      <Name>DOTween.Modules</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
