@@ -6,13 +6,19 @@ using TMPro;
 public class Score_UI : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI text;
-    private int score;
-
+    private TextMeshProUGUI scoreText, maxScoreText;
+    public int score;
+    private int maxScore;
+    private int maxScoreSession = 0;
     private void IncreaseScore()
     {
         score++;
-        text.text = score.ToString();
+        if(score > maxScoreSession)
+        {
+            maxScoreSession = score;
+        }
+        Save();
+        scoreText.text = score.ToString();
     }
 
     private void OnEnable() 
@@ -30,6 +36,17 @@ public class Score_UI : MonoBehaviour
     private void resetScore()
     {
         score = 0;
-        text.text = score.ToString();
+        scoreText.text = score.ToString();
+    }
+
+    private void Save()
+    {
+        maxScore= PlayerPrefs.GetInt("MaxScore");
+        if(maxScoreSession > maxScore)
+        {
+            PlayerPrefs.SetInt("MaxScore",maxScoreSession);
+        }
+
+        Debug.Log(maxScore + " " + maxScoreSession);
     }
 }

@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 75429814}
   - component: {fileID: 75429813}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Icon_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,6 +217,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1061376227}
+        m_TargetAssemblyTypeName: Sprite_Changer, ScriptFolder
+        m_MethodName: SaveSprite
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &75429814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +280,7 @@ GameObject:
   - component: {fileID: 207121506}
   - component: {fileID: 207121505}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Icon_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -345,6 +357,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 207121506}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1061376227}
+        m_TargetAssemblyTypeName: Sprite_Changer, ScriptFolder
+        m_MethodName: SaveSprite
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -448,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 200
+    m_Left: 60
     m_Right: 0
     m_Top: 25
     m_Bottom: 0
@@ -456,7 +480,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 200, y: 200}
-  m_Spacing: {x: 200, y: 50}
+  m_Spacing: {x: 100, y: 50}
   m_Constraint: 0
   m_ConstraintCount: 1
 --- !u!225 &207671779
@@ -654,7 +678,7 @@ GameObject:
   - component: {fileID: 316879384}
   - component: {fileID: 316879383}
   m_Layer: 5
-  m_Name: Button (7)
+  m_Name: Icon_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -731,6 +755,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 316879384}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1061376227}
+        m_TargetAssemblyTypeName: Sprite_Changer, ScriptFolder
+        m_MethodName: SaveSprite
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1046,7 +1082,7 @@ GameObject:
   - component: {fileID: 827088446}
   - component: {fileID: 827088445}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Icon_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1127,6 +1163,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1061376227}
+        m_TargetAssemblyTypeName: Sprite_Changer, ScriptFolder
+        m_MethodName: SaveSprite
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &827088446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1178,7 +1226,7 @@ GameObject:
   - component: {fileID: 893584595}
   - component: {fileID: 893584594}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Icon_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1259,6 +1307,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1061376227}
+        m_TargetAssemblyTypeName: Sprite_Changer, ScriptFolder
+        m_MethodName: SaveSprite
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &893584595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,7 +1370,7 @@ GameObject:
   - component: {fileID: 997172422}
   - component: {fileID: 997172421}
   m_Layer: 5
-  m_Name: Button (6)
+  m_Name: Icon_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1391,6 +1451,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1061376227}
+        m_TargetAssemblyTypeName: Sprite_Changer, ScriptFolder
+        m_MethodName: SaveSprite
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &997172422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1441,6 +1513,7 @@ GameObject:
   - component: {fileID: 1061376228}
   - component: {fileID: 1061376227}
   - component: {fileID: 1061376230}
+  - component: {fileID: 1061376231}
   m_Layer: 0
   m_Name: CurrentSprite
   m_TagString: Untagged
@@ -1539,6 +1612,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b95b6a3b7cb5df4c95eb9705345bab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1061376231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061376226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d08731a3b22b448aaa404fc3707f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1079009152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,7 +1637,7 @@ GameObject:
   - component: {fileID: 1079009155}
   - component: {fileID: 1079009154}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: Icon_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1629,6 +1714,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 1079009155}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1061376227}
+        m_TargetAssemblyTypeName: Sprite_Changer, ScriptFolder
+        m_MethodName: SaveSprite
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1786,7 +1883,7 @@ GameObject:
   - component: {fileID: 1726045651}
   - component: {fileID: 1726045650}
   m_Layer: 5
-  m_Name: Button (8)
+  m_Name: Icon_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1862,6 +1959,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1726045651}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1061376227}
+        m_TargetAssemblyTypeName: Sprite_Changer, ScriptFolder
+        m_MethodName: SaveSprite
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2029,7 +2138,7 @@ GameObject:
   - component: {fileID: 2064011473}
   - component: {fileID: 2064011472}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: Icon_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2106,6 +2215,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 2064011473}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1061376227}
+        m_TargetAssemblyTypeName: Sprite_Changer, ScriptFolder
+        m_MethodName: SaveSprite
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
