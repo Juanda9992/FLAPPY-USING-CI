@@ -68,6 +68,8 @@
      <Compile Include="Assets\Scripts\UI\Fade_Canvas.cs" />
      <Compile Include="Assets\Scripts\UI\Game_UI\HotBar_UI.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Hearth_power_Up.cs" />
+     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Random_Points_Obstacle.cs" />
+     <Compile Include="Assets\Scripts\Main_Menu\UI_Animator.cs" />
      <None Include="Assets\Scripts\ScriptFolder.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

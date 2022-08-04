@@ -156,7 +156,7 @@ Transform:
   m_GameObject: {fileID: 6927383565692764552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.5, y: -0.5, z: 0}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 5946457674375862490}
   m_RootOrder: 0
@@ -236,7 +236,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4, y: 1.4}
+  m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
 --- !u!114 &6927383565692764557
 MonoBehaviour:
@@ -390,6 +390,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5356574185940491189, guid: c4dc05629f545d44ba2a5400a0cc5cf4, type: 3}
+    - target: {fileID: 231386408644410476, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 264565648683194516, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -422,6 +426,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5356574185940491189, guid: c4dc05629f545d44ba2a5400a0cc5cf4, type: 3}
+    - target: {fileID: 1528089764454438872, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2206584032919107745, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -442,6 +450,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5356574185940491189, guid: c4dc05629f545d44ba2a5400a0cc5cf4, type: 3}
+    - target: {fileID: 4418898751084294975, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4733278063718135248, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -470,10 +482,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5356574185940491189, guid: c4dc05629f545d44ba2a5400a0cc5cf4, type: 3}
+    - target: {fileID: 7083010261534341874, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7215360050424914292, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5356574185940491189, guid: c4dc05629f545d44ba2a5400a0cc5cf4, type: 3}
+    - target: {fileID: 7215360050424914292, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7393994997059545501, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -486,6 +506,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5356574185940491189, guid: c4dc05629f545d44ba2a5400a0cc5cf4, type: 3}
+    - target: {fileID: 8188401244595061456, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8601237507069323011, guid: 1cdf2b4035997364d82f150d65e7503e, type: 3}
       propertyPath: m_RootOrder
       value: 4

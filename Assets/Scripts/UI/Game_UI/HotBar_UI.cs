@@ -22,11 +22,11 @@ public class HotBar_UI : MonoBehaviour
 
     private void ShowButton()
     {
-        button.DOFade(1,0.3f);
+        button.DOFade(1,0.2f);
     }
     private void HideButton()
     {
-        button.DOFade(0,0.3f);
+        button.DOFade(0,0.2f);
     }
 
     void OnEnable()
