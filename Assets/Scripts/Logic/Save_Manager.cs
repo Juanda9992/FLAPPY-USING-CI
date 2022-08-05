@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Save_Manager : MonoBehaviour
 {
+    public delegate void onProgressDeleted();
+    public static event onProgressDeleted OnProgressDeleted;
     // Start is called before the first frame update
     void Awake()
     {
-        Debug.Log(PlayerPrefs.GetInt("Icon"));
         if(!PlayerPrefs.HasKey("Icon"))
         {
             PlayerPrefs.SetInt("Icon",0);
@@ -16,6 +17,37 @@ public class Save_Manager : MonoBehaviour
         {
             PlayerPrefs.SetInt("MaxScore",0);
         }       
+        if(!PlayerPrefs.HasKey("TotalPlayTime"))
+        {
+            PlayerPrefs.SetFloat("TotalPlayTime",0);
+        }
+        if(!PlayerPrefs.HasKey("TotalJumps"))
+        {
+            PlayerPrefs.SetInt("TotalJumps",0);
+        }
+        if(!PlayerPrefs.HasKey("TotalScore"))
+        {
+            PlayerPrefs.SetInt("TotalScore",0);
+        }
+        if(!PlayerPrefs.HasKey("TotalDeaths"))
+        {
+            PlayerPrefs.SetInt("TotalDeaths",0);
+        }
+        if(!PlayerPrefs.HasKey("TotalBombs"))
+        {
+            PlayerPrefs.SetInt("TotalBombs",0);
+        }
+        if(!PlayerPrefs.HasKey("TotalHearts"))
+        {
+            PlayerPrefs.SetInt("TotalHearts",0);
+        }
+
+    }
+
+    public void DeleteProgress()
+    {
+        PlayerPrefs.DeleteAll();
+        OnProgressDeleted?.Invoke();
     }
 
 }

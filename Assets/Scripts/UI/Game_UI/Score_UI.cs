@@ -13,6 +13,7 @@ public class Score_UI : MonoBehaviour
     private void IncreaseScore()
     {
         score++;
+        Stats_Handler.stats_Handler_inst.totalScore++;
         if(score > maxScoreSession)
         {
             maxScoreSession = score;

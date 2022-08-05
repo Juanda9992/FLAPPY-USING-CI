@@ -25,7 +25,7 @@ public class Fade_Canvas : MonoBehaviour
     public void showPanel(string scene)
     {
         canvas.DOFade(1,0.2f).OnComplete(()=>Scene_Loader.scene_Loader_inst.LoadScene(scene));
-        canvas.DOFade(0,0.2f).SetDelay(0.2f);
+        canvas.DOFade(0,0.2f).SetDelay(0.2f).OnComplete(()=>Stats_Handler.stats_Handler_inst.SetStats());
     }
 
 }

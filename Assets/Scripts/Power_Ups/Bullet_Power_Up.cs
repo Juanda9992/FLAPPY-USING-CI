@@ -8,6 +8,7 @@ public class Bullet_Power_Up : MonoBehaviour, IPickable
     public void OnPicked()
     {
         GameObject.FindObjectOfType<Player_Shoot>().IncreaseAmmo();
+        Stats_Handler.stats_Handler_inst.totalBombs++;
         Destroy(this.gameObject);
     }
 }
