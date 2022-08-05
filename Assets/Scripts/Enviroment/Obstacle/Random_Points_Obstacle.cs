@@ -15,6 +15,10 @@ public class Random_Points_Obstacle : MonoBehaviour
         text = GetComponent<TextMeshProUGUI>();
         text.text = score.ToString();   
     }
+    void Update()
+    {
+        transform.rotation = Camera.main.transform.rotation;
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
