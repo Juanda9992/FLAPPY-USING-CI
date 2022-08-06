@@ -11,10 +11,6 @@ public class Background_Movement : MonoBehaviour
     [SerializeField]
     private float xMovement;
 
-    void Start()
-    {
-        setSpeed();
-    }
     void Update()
     {
         transform.position = new Vector2(transform.position.x - moveSpeed * Time.deltaTime,transform.position.y);
@@ -22,10 +18,5 @@ public class Background_Movement : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x + xMovement,transform.position.y);
         }
-    }
-
-    private void setSpeed()
-    {
-        moveSpeed = Random.Range(1,2);
     }
 }

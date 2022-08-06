@@ -19,6 +19,7 @@ public class Player_Jump : MonoBehaviour
     private Gravity_Switcher gravity_Switcher;
 
     public int health = 1;
+    private bool hasDeath = false;
 
     private SpriteRenderer sRenderer;
     // Start is called before the first frame update
@@ -34,7 +35,6 @@ public class Player_Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(onPlayerJump);
         if(Input.GetKeyDown(KeyCode.Space)|| Input.GetMouseButtonDown(0) )
         {
             jumping = true;
@@ -44,6 +44,8 @@ public class Player_Jump : MonoBehaviour
         {
             Death();
         }
+
+        IncreasePlayTime();
 
     }
 
@@ -55,6 +57,7 @@ public class Player_Jump : MonoBehaviour
             jumping = false;
             transform.DOShakeScale(0.1f,0.5f).OnComplete(()=> transform.localScale = Vector2.one);
             rb.velocity = Vector2.up * jumpVelocity * gravity_Switcher.gravityAxis;
+            Stats_Handler.stats_Handler_inst.totalJumps++;
         }
         if(gravity_Switcher.gravityAxis >0)
         {
@@ -103,8 +106,11 @@ public class Player_Jump : MonoBehaviour
     private void Death()
     {
         onPlayerDeath?.Invoke();
-        resetPos();
-            
+        if(!hasDeath)
+        {
+            hasDeath = true;
+            Stats_Handler.stats_Handler_inst.totalDeaths ++;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -120,8 +126,13 @@ public class Player_Jump : MonoBehaviour
         transform.position = firstPos;
         rb.velocity = Vector2.zero;
         sRenderer.flipY = false;
+        hasDeath = false;
     }
     
+    private void IncreasePlayTime()
+    {
+        Stats_Handler.stats_Handler_inst.totalPlayTime += Time.deltaTime;
+    }
     public void IncreaseScore()
     {
         onPlayerScored?.Invoke();

@@ -32,12 +32,12 @@ public class Moving_Obstacle : MonoBehaviour
 
     void OnEnable()
     {
-        Player_Jump.onPlayerDeath += DestroyObstacle;
+        GameOver_UI.onRestart += DestroyObstacle;
     }
 
     void OnDisable()
     {
-        Player_Jump.onPlayerDeath -= DestroyObstacle;
+        GameOver_UI.onRestart -= DestroyObstacle;
     }
 
 }
