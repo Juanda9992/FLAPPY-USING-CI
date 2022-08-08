@@ -18,7 +18,15 @@ public class Moving_Obstacle : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        rb.velocity = Vector2.left * 8;
+        if(Game_State.gameStarting)
+        {
+            rb.velocity = Vector2.left * 8;    
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
+        
     }
 
     private float snapValue(float value,float multipleOf)

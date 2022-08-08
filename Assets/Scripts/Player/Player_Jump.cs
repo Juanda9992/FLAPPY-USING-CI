@@ -21,6 +21,7 @@ public class Player_Jump : MonoBehaviour
     public int health = 1;
     private bool hasDeath = false;
 
+    private Camera_Controller camera_Controller;
     private SpriteRenderer sRenderer;
     // Start is called before the first frame update
     void Start()
@@ -30,14 +31,19 @@ public class Player_Jump : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         firstPos = transform.position;
         sRenderer.sprite = GetSprite();
+        camera_Controller = GameObject.FindObjectOfType<Camera_Controller>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)|| Input.GetMouseButtonDown(0) )
+        if(Game_State.gameStarting)
         {
-            jumping = true;
+            if(Input.GetKeyDown(KeyCode.Space)|| Input.GetMouseButtonDown(0) )
+            {
+                jumping = true;
+            }
+
         }
 
         if(transform.position.x < -14)
@@ -105,9 +111,14 @@ public class Player_Jump : MonoBehaviour
 
     private void Death()
     {
+        
         onPlayerDeath?.Invoke();
         if(!hasDeath)
         {
+            Game_State.gameStarting = false;
+            rb.isKinematic = true;
+            rb.velocity = Vector2.zero;
+            camera_Controller.zoomOnDeath(transform.position);
             hasDeath = true;
             Stats_Handler.stats_Handler_inst.totalDeaths ++;
         }
@@ -123,6 +134,7 @@ public class Player_Jump : MonoBehaviour
 
     public void resetPos()
     {
+        rb.isKinematic = false;
         transform.position = firstPos;
         rb.velocity = Vector2.zero;
         sRenderer.flipY = false;

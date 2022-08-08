@@ -22,7 +22,7 @@ public class GameOver_UI : MonoBehaviour
     {
         scoreText.text = "Score: " + score.score;
         maxScoreText.text = "Highest Score: " + PlayerPrefs.GetInt("MaxScore").ToString();
-        panel.DOMoveY(540,1f);
+        panel.DOMoveY(540,0.4f).SetDelay(0.2f);
     }
 
     void OnEnable()
@@ -43,7 +43,8 @@ public class GameOver_UI : MonoBehaviour
 
     public void restart()
     {
-        panel.DOLocalMoveY(2540,1f);
+        Game_State.gameStarting = true;
+        panel.DOMoveY(2540,1f);
         onRestart?.Invoke();
     }
 }
