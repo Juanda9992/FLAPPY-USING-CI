@@ -29,7 +29,8 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
-          androidAppBundle: true
+          androidAppBundle: true    
+          androidKeystoreName: user.keystore
       - uses: actions/upload-artifact@v2
         with:
           name: Build-${{ matrix.targetPlatform }}
