@@ -33,7 +33,8 @@ public class Camera_Controller : MonoBehaviour
     private void resetCamera()
     {
         rotated = false;
-        transform.position = new Vector3(transform.position.x, transform.position.y,-1);
+        transform.DOMove(new Vector3(0,0,-1),0.8f);
+        Camera.main.DOOrthoSize(8,0.8f);
         transform.rotation = Quaternion.Euler(0,0,0);
     }
 
@@ -46,4 +47,12 @@ public class Camera_Controller : MonoBehaviour
     {
         GameOver_UI.onRestart -= resetCamera;    
     }
+
+    public void zoomOnDeath(Vector3 position)
+    {
+        DOTween.To(()=> Time.timeScale, x=> Time.timeScale = x, 0.3f,0.4f);
+        transform.DOMove(position - Vector3.forward,0.7f);
+        Camera.main.DOOrthoSize(6,0.4f);
+    }
+
 }
