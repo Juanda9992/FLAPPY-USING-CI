@@ -152,6 +152,9 @@ TextureImporter:
   - first:
       213: -8823867054069491255
     second: isonswhite2_49
+  - first:
+      213: -7972665537884034456
+    second: isonswhite2_50
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -374,9 +377,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 168
-        y: 146
-        width: 7
-        height: 8
+        y: 136
+        width: 17
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,12 +397,12 @@ TextureImporter:
       name: isonswhite2_6
       rect:
         serializedVersion: 2
-        x: 178
-        y: 146
-        width: 7
-        height: 8
+        x: 41
+        y: 44
+        width: 16
+        height: 13
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -436,12 +439,12 @@ TextureImporter:
       name: isonswhite2_8
       rect:
         serializedVersion: 2
-        x: 168
-        y: 136
-        width: 7
-        height: 8
+        x: 39
+        y: 70
+        width: 18
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -449,27 +452,6 @@ TextureImporter:
       bones: []
       spriteID: c2825335688d8a2f0800000000000000
       internalID: -961280449010390996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: isonswhite2_9
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 136
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4850f3fbbaf8704b0800000000000000
-      internalID: -5474248854234790524
       vertices: []
       indices: 
       edges: []
@@ -638,27 +620,6 @@ TextureImporter:
       bones: []
       spriteID: 42874af4f8c125dc0800000000000000
       internalID: -3651824946001971164
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: isonswhite2_18
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 44
-        width: 18
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe85e78da88b940b0800000000000000
-      internalID: -5743856943257200401
       vertices: []
       indices: 
       edges: []
@@ -962,9 +923,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 143
-        y: 52
+        y: 40
         width: 4
-        height: 5
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1004,9 +965,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 200
-        y: 7
+        y: 40
         width: 16
-        height: 51
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1021,36 +982,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: isonswhite2_36
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 46
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 971dbedb5549eeec0800000000000000
-      internalID: -3535725561459781255
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: isonswhite2_37
       rect:
         serializedVersion: 2
-        x: 143
-        y: 40
-        width: 4
-        height: 5
+        x: 73
+        y: 7
+        width: 15
+        height: 19
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1173,7 +1113,7 @@ TextureImporter:
         serializedVersion: 2
         x: 103
         y: 7
-        width: 11
+        width: 16
         height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1234,9 +1174,9 @@ TextureImporter:
       name: isonswhite2_46
       rect:
         serializedVersion: 2
-        x: 138
+        x: 137
         y: 7
-        width: 8
+        width: 14
         height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1302,7 +1242,7 @@ TextureImporter:
         width: 21
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1310,6 +1250,27 @@ TextureImporter:
       bones: []
       spriteID: 9c95ae84aa35b8580800000000000000
       internalID: -8823867054069491255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: isonswhite2_50
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 7
+        width: 3
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a6c6d2fe66b5190800000000000000
+      internalID: -7972665537884034456
       vertices: []
       indices: 
       edges: []

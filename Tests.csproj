@@ -640,6 +640,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="DOTween.Modules.csproj">
+      <Project>{5719bcde-417d-cd39-4571-1b3f7b0f5cf8}</Project>
+      <Name>DOTween.Modules</Name>
+    </ProjectReference>
     <ProjectReference Include="ScriptFolder.csproj">
       <Project>{904d8987-5b41-0980-f68f-5f971ba3789a}</Project>
       <Name>ScriptFolder</Name>

@@ -36,19 +36,26 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Logic\Save_Manager.cs" />
      <Compile Include="Assets\Scripts\Logic\Pause_Manager.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Revert_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Logic\Time_Speed_Controller.cs" />
+     <Compile Include="Assets\Scripts\UI\Button_UI_Script.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Bullet.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Spam_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Key_Obstacle.cs" />
-     <Compile Include="Assets\Scripts\UI\Score_UI.cs" />
+     <Compile Include="Assets\Scripts\UI\Game_UI\Score_UI.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Camera_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Logic\Scene_Loader.cs" />
+     <Compile Include="Assets\Scripts\Logic\Stats_Manager.cs" />
+     <Compile Include="Assets\Scripts\Logic\Stats_Handler.cs" />
+     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Random_Points_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Gravity_Obstacle.cs" />
+     <Compile Include="Assets\Scripts\Main_Menu\UI_Animator.cs" />
      <Compile Include="Assets\Scripts\UI\Icon_Selection_Menu\Sprite_Changer.cs" />
      <Compile Include="Assets\Scripts\Player\Player_Shoot.cs" />
      <Compile Include="Assets\Scripts\Player\Player_Jump.cs" />
+     <Compile Include="Assets\Scripts\Platforms\Platform_Manager.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Button_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Time_Speed_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Logic\Spawner.cs" />
@@ -59,10 +66,14 @@
      <Compile Include="Assets\Scripts\Interfaces\IPickable.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Toggle_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Moving_Obstacle.cs" />
-     <Compile Include="Assets\Scripts\UI\GameOver_UI.cs" />
+     <Compile Include="Assets\Scripts\UI\Game_UI\GameOver_UI.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Power_Up_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Logic\Camera_Controller.cs" />
+     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Background_Changer_Obstacle.cs" />
+     <Compile Include="Assets\Scripts\UI\Fade_Canvas.cs" />
+     <Compile Include="Assets\Scripts\UI\Game_UI\HotBar_UI.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Hearth_power_Up.cs" />
+     <Compile Include="Assets\Scripts\Logic\Game_State.cs" />
      <None Include="Assets\Scripts\ScriptFolder.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -672,6 +683,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="DOTween.Modules.csproj">
+      <Project>{5719bcde-417d-cd39-4571-1b3f7b0f5cf8}</Project>
+      <Name>DOTween.Modules</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

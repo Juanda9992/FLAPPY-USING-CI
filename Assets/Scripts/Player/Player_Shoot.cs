@@ -4,29 +4,68 @@ using UnityEngine;
 
 public class Player_Shoot : MonoBehaviour
 {
+    public delegate void OnAmmOut();
+    public delegate void OnAmmoIncreased();
+    public static event OnAmmOut onAmmoOut;
+    public static event OnAmmoIncreased onAmmoIncreased;
     [SerializeField] private GameObject bulletPrefab;
     public int ammo = 0;
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.K) && ammo >0)
+        if(Input.GetKeyDown(KeyCode.K))
         {
             Shoot();
         }       
     }
 
-    private void Shoot()
+    private void ResetAmmo()
     {
-        ammo --;
-        Instantiate(bulletPrefab,new Vector2(transform.position.x +1, transform.position.y),Quaternion.identity);
+        ammo = 0;
+        onAmmoOut?.Invoke();
     }
 
+    public void Shoot()
+    {
+        if(ammo > 0)
+        {
+            Instantiate(bulletPrefab,new Vector2(transform.position.x +1, transform.position.y),Quaternion.identity);
+            CheckForAmmo();
+        }
+        
+    }
+
+    private void CheckForAmmo()
+    {
+        if(ammo > 0)
+        {
+            ammo--;
+        }
+        if(ammo <= 0)
+        {
+            onAmmoOut?.Invoke();
+        }
+    }
+    public void IncreaseAmmo()
+    {
+        onAmmoIncreased?.Invoke();
+        ammo++;
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.TryGetComponent<IPickable>(out IPickable pickable))
-        {
-            
+        {   
             pickable.OnPicked();
         }
+    }   
+
+    void OnEnable()
+    {
+        Player_Jump.onPlayerDeath += ResetAmmo;
+    }
+
+    void OnDisable()
+    {
+        Player_Jump.onPlayerDeath -= ResetAmmo;
     }
 }

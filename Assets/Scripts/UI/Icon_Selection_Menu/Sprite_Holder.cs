@@ -19,9 +19,6 @@ public class Sprite_Holder : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        if(sprite_Holder_inst.currentSprite == null)
-        {
-            sprite_Holder_inst.currentSprite = avaliableSprites[0];
-        }
+        sprite_Holder_inst.currentSprite = avaliableSprites[PlayerPrefs.GetInt("Icon")];
     }
 }

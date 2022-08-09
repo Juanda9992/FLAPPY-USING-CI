@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-
-
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player_Jump : MonoBehaviour
 {
@@ -21,7 +19,9 @@ public class Player_Jump : MonoBehaviour
     private Gravity_Switcher gravity_Switcher;
 
     public int health = 1;
+    private bool hasDeath = false;
 
+    private Camera_Controller camera_Controller;
     private SpriteRenderer sRenderer;
     // Start is called before the first frame update
     void Start()
@@ -31,20 +31,27 @@ public class Player_Jump : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         firstPos = transform.position;
         sRenderer.sprite = GetSprite();
+        camera_Controller = GameObject.FindObjectOfType<Camera_Controller>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if(Game_State.gameStarting)
         {
-            jumping = true;
+            if(Input.GetKeyDown(KeyCode.Space)|| Input.GetMouseButtonDown(0) )
+            {
+                jumping = true;
+            }
+
         }
 
         if(transform.position.x < -14)
         {
             Death();
         }
+
+        IncreasePlayTime();
 
     }
 
@@ -56,6 +63,7 @@ public class Player_Jump : MonoBehaviour
             jumping = false;
             transform.DOShakeScale(0.1f,0.5f).OnComplete(()=> transform.localScale = Vector2.one);
             rb.velocity = Vector2.up * jumpVelocity * gravity_Switcher.gravityAxis;
+            Stats_Handler.stats_Handler_inst.totalJumps++;
         }
         if(gravity_Switcher.gravityAxis >0)
         {
@@ -103,9 +111,17 @@ public class Player_Jump : MonoBehaviour
 
     private void Death()
     {
+        
         onPlayerDeath?.Invoke();
-        resetPos();
-            
+        if(!hasDeath)
+        {
+            Game_State.gameStarting = false;
+            rb.isKinematic = true;
+            rb.velocity = Vector2.zero;
+            camera_Controller.zoomOnDeath(transform.position);
+            hasDeath = true;
+            Stats_Handler.stats_Handler_inst.totalDeaths ++;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -118,11 +134,17 @@ public class Player_Jump : MonoBehaviour
 
     public void resetPos()
     {
+        rb.isKinematic = false;
         transform.position = firstPos;
         rb.velocity = Vector2.zero;
         sRenderer.flipY = false;
+        hasDeath = false;
     }
     
+    private void IncreasePlayTime()
+    {
+        Stats_Handler.stats_Handler_inst.totalPlayTime += Time.deltaTime;
+    }
     public void IncreaseScore()
     {
         onPlayerScored?.Invoke();
