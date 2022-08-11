@@ -8,7 +8,7 @@ public class Stats_Manager : MonoBehaviour
 
     public TextMeshProUGUI playTime,jumps,score,highScore,deaths,bombs,hearts;
 
-    void Awake()
+    void Start()
     {
         UpdateText();
     }

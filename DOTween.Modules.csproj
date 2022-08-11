@@ -288,26 +288,11 @@
     <Reference Include="DOTweenEditor">
         <HintPath>C:\Users\Camilo\Desktop\JUAN\Unity 5\GAMES\FLAPPY-BIRD-USING-CI\FLAPPY USING CI\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst.Unsafe">
-        <HintPath>C:\Users\Camilo\Desktop\JUAN\Unity 5\GAMES\FLAPPY-BIRD-USING-CI\FLAPPY USING CI\Library\PackageCache\com.unity.burst@1.5.1\Unity.Burst.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Mdb">
-        <HintPath>C:\Users\Camilo\Desktop\JUAN\Unity 5\GAMES\FLAPPY-BIRD-USING-CI\FLAPPY USING CI\Library\PackageCache\com.unity.burst@1.5.1\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Pdb">
-        <HintPath>C:\Users\Camilo\Desktop\JUAN\Unity 5\GAMES\FLAPPY-BIRD-USING-CI\FLAPPY USING CI\Library\PackageCache\com.unity.burst@1.5.1\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil">
-        <HintPath>C:\Users\Camilo\Desktop\JUAN\Unity 5\GAMES\FLAPPY-BIRD-USING-CI\FLAPPY USING CI\Library\PackageCache\com.unity.burst@1.5.1\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
-    </Reference>
     <Reference Include="log4netPlastic">
         <HintPath>C:\Users\Camilo\Desktop\JUAN\Unity 5\GAMES\FLAPPY-BIRD-USING-CI\FLAPPY USING CI\Library\PackageCache\com.unity.collab-proxy@1.17.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
         <HintPath>C:\Users\Camilo\Desktop\JUAN\Unity 5\GAMES\FLAPPY-BIRD-USING-CI\FLAPPY USING CI\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Rocks">
-        <HintPath>C:\Users\Camilo\Desktop\JUAN\Unity 5\GAMES\FLAPPY-BIRD-USING-CI\FLAPPY USING CI\Library\PackageCache\com.unity.burst@1.5.1\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
         <HintPath>C:\Users\Camilo\Desktop\JUAN\Unity 5\GAMES\FLAPPY-BIRD-USING-CI\FLAPPY USING CI\Library\PackageCache\com.unity.collab-proxy@1.17.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
