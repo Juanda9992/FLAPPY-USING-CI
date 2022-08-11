@@ -28,6 +28,7 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
+          buildMethod: UnityBuilderAction.BuildScript.Build
           targetPlatform: ${{ matrix.targetPlatform }}
           androidAppBundle: true
           androidKeystoreName: user.keystore
