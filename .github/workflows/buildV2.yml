@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
           lfs: true    
       
-      - uses: game-ci/unity-builder@main
+      - uses: game-ci/unity-builder@androidApiLevel
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
