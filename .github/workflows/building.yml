@@ -1,8 +1,11 @@
 name: Build and upload project
 
-on: [workflow_dispatch]
+on:     
+  pull_request_target:
+     types: opened
+ 
+  workflow_dispatch:
     
-
 jobs:
   buildForAllSupportedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
@@ -41,6 +44,7 @@ jobs:
           
                 # Publish to Itch.IO
       - uses: manleydev/butler-publish-itchio-action@master
+        if: github.event == pull_request.merged
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
           CHANNEL: ${{ matrix.targetPlatform }}
