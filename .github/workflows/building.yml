@@ -42,13 +42,15 @@ jobs:
           name: Build-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
           
-                # Publish to Itch.IO
-      - uses: manleydev/butler-publish-itchio-action@master
-        if: github.event == pull_request.merged
-        env:
-          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
-          CHANNEL: ${{ matrix.targetPlatform }}
-          ITCH_GAME: flappyci
-          ITCH_USER: juandagames
-          PACKAGE: build/${{ matrix.targetPlatform }}
+  publishToItchio:
+      runs-on: ubuntu-latest
+      if: github.event == pull_request.merged
+      steps:
+        - uses: manleydev/butler-publish-itchio-action@master
+          env:
+              BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+              CHANNEL: ${{ matrix.targetPlatform }}
+              ITCH_GAME: flappyci
+              ITCH_USER: juandagames
+              PACKAGE: build/${{ matrix.targetPlatform }}
 
