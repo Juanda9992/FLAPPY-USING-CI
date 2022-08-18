@@ -1,24 +1,19 @@
-name: Build and upload project
+name: Build for Play Store
 
-on:     
-  pull_request:
-     types: opened
- 
-  workflow_dispatch:
+on: [release, workflow_dispatch]
     
 jobs:
   buildForAllSupportedPlatforms:
-    name: Build for ${{ matrix.targetPlatform }}
+    name: Build for Play Store
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         targetPlatform:
-          - StandaloneWindows64 # Build a Windows 64-bit standalone.
           - Android
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.1.0
         with:
           fetch-depth: 0
           lfs: true    
@@ -27,31 +22,20 @@ jobs:
           path: Library
           key: Library-${{ matrix.targetPlatform }}
           restore-keys: Library-
-      - uses: game-ci/unity-builder@v2
+      
+      - uses: game-ci/unity-builder@main
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
+          androidAppBundle: true
           androidKeystoreName: user.keystore
           androidKeystoreBase64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
           androidKeystorePass: ${{ secrets.ANDROID_KEYSTORE_PASS }}
           androidKeyaliasName: ${{ secrets.ANDROID_KEYALIAS_NAME }}
           androidKeyaliasPass: ${{ secrets.ANDROID_KEYALIAS_PASS }}
+          androidTargetSdkVersion: AndroidApiLevel31
       - uses: actions/upload-artifact@v2
         with:
           name: Build-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
-          
-  publishToItchio:
-      runs-on: ubuntu-latest
-      needs: buildForAllSupportedPlatforms
-      if: github.event_name == 'pull_request.opened'
-      steps:
-        - uses: manleydev/butler-publish-itchio-action@master
-          env:
-              BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
-              CHANNEL: ${{ matrix.targetPlatform }}
-              ITCH_GAME: flappyci
-              ITCH_USER: juandagames
-              PACKAGE: build/${{ matrix.targetPlatform }}
-
