@@ -29,7 +29,7 @@ public class Stats_Handler : MonoBehaviour
         ReadStats();
     }
 
-    private void ReadStats()
+    public void ReadStats()
     {
         totalPlayTime = PlayerPrefs.GetFloat("TotalPlayTime");
         totalJumps = PlayerPrefs.GetInt("TotalJumps");

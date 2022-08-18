@@ -56,6 +56,7 @@ public class Player_Shoot : MonoBehaviour
         if(other.TryGetComponent<IPickable>(out IPickable pickable))
         {   
             pickable.OnPicked();
+            Destroy(other.gameObject);
         }
     }   
 
