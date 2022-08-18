@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using System;
+using TMPro;
 public class HotBar_UI : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI heartText;
     private Player_Shoot shoot;
+    private Player_Jump player;
     [SerializeField] private CanvasGroup button;
 
     [SerializeField] private GameObject letter;
@@ -18,6 +21,12 @@ public class HotBar_UI : MonoBehaviour
             letter.SetActive(false);
         }
         shoot = GameObject.FindObjectOfType<Player_Shoot>();
+        player = GameObject.FindObjectOfType<Player_Jump>();
+    }
+
+    void Update()
+    {
+        heartText.text = player.health.ToString();
     }
 
     private void ShowButton()
