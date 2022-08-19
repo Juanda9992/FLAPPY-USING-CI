@@ -54,5 +54,10 @@ public class Camera_Controller : MonoBehaviour
         transform.DOMove(position - Vector3.forward,0.7f);
         Camera.main.DOOrthoSize(6,0.4f);
     }
+    public void Shake()
+    {
+        Transform previousPosition = transform;
+        transform.DOShakePosition(1).OnComplete(()=> transform.position = previousPosition.position);
+    }
 
 }
