@@ -104,7 +104,8 @@ public class Player_Jump : MonoBehaviour
             }
             else
             {
-                resetPos();
+                Destroy(other.gameObject);
+                Camera.main.GetComponent<Camera_Controller>().Shake();
             }
         }
     }
@@ -137,6 +138,7 @@ public class Player_Jump : MonoBehaviour
         rb.isKinematic = false;
         transform.position = firstPos;
         rb.velocity = Vector2.zero;
+        health = 1;
         sRenderer.flipY = false;
         hasDeath = false;
     }

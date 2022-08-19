@@ -16,6 +16,7 @@ public class Key_Obstacle : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             door.SetActive(false);
+            Destroy(this.gameObject);
         }
     }
 }
