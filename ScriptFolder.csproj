@@ -74,6 +74,7 @@
      <Compile Include="Assets\Scripts\UI\Fade_Canvas.cs" />
      <Compile Include="Assets\Scripts\UI\Game_UI\HotBar_UI.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Hearth_power_Up.cs" />
+     <Compile Include="Assets\Scripts\Enviroment\Obstacle\Spam_Obstacle_V2.cs" />
      <None Include="Assets\Scripts\ScriptFolder.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Editor\2021.3.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

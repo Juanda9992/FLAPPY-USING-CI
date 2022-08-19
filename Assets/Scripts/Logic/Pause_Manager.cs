@@ -17,7 +17,6 @@ public class Pause_Manager : MonoBehaviour
     }
     public void PauseGame()
     {
-        Debug.Log(Time.timeScale);
         if(isPaused)
         {
             isPaused = false; //Switch bool
@@ -42,6 +41,14 @@ public class Pause_Manager : MonoBehaviour
         {
             PauseGame();
         }
+    }
+
+    private void OnApplicationFocus(bool focusStatus) 
+    {
+        if(!isPaused &&!focusStatus)
+        {
+            PauseGame();
+        }    
     }
 
 }

@@ -44,10 +44,12 @@ public class Save_Manager : MonoBehaviour
 
     }
 
+    [ContextMenu("DeleteProgress")]
     public void DeleteProgress()
     {
         PlayerPrefs.DeleteAll();
         OnProgressDeleted?.Invoke();
     }
+
 
 }

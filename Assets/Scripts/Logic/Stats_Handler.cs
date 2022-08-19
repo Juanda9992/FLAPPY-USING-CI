@@ -50,4 +50,9 @@ public class Stats_Handler : MonoBehaviour
         PlayerPrefs.SetInt("TotalBombs",totalBombs);
         PlayerPrefs.SetInt("TotalHearts",totalHearts);
     }
+
+    private void OnApplicationQuit() 
+    {
+        SetStats();    
+    }
 }
