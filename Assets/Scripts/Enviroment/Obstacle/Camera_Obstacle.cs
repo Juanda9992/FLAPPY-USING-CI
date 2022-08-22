@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera_Obstacle : MonoBehaviour
+public class Camera_Obstacle : MonoBehaviour, IActivable
 {
     private SpriteRenderer sRenderer;
 
@@ -33,5 +33,9 @@ public class Camera_Obstacle : MonoBehaviour
         {
             sRenderer.sprite = normalSprite;
         }
+    }
+    public void OnActivate()
+    {
+        Color_Changer.ChangeSpriteColor(sRenderer);
     }
 }
