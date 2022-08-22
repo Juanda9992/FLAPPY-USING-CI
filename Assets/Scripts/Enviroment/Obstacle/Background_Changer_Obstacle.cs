@@ -9,7 +9,7 @@ public class Background_Changer_Obstacle : MonoBehaviour,IActivable
     {
         if(other.CompareTag("Player"))
         {
-            Camera.main.DOColor(Random.ColorHSV(0,0.9f,0.8f,1,0.5f,0.6f,1,1),1);
+            Color_Changer.ChangeBackgroundColor();
         }
     }
 

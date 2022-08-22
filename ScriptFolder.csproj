@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Logic\Save_Manager.cs" />
+     <Compile Include="Assets\Scripts\Interfaces\IActivable.cs" />
      <Compile Include="Assets\Scripts\Logic\Pause_Manager.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Revert_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Logic\Time_Speed_Controller.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\Scripts\Player\Player_Jump.cs" />
      <Compile Include="Assets\Scripts\Platforms\Platform_Manager.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Button_Obstacle.cs" />
+     <Compile Include="Assets\Scripts\Enviroment\Enviroment\Color_Changer.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Time_Speed_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Logic\Spawner.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Bullet_Power_Up.cs" />
@@ -75,9 +77,8 @@
      <Compile Include="Assets\Scripts\UI\Fade_Canvas.cs" />
      <Compile Include="Assets\Scripts\UI\Game_UI\HotBar_UI.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Hearth_power_Up.cs" />
-     <Compile Include="Assets\Scripts\Interfaces\IActivable.cs" />
-     <Compile Include="Assets\Scripts\Enviroment\Enviroment\Color_Changer.cs" />
      <Compile Include="Assets\Scripts\Main_Menu\Game_Settings.cs" />
+     <Compile Include="Assets\Scripts\Enviroment\Background\Ground_Color.cs" />
      <None Include="Assets\Scripts\ScriptFolder.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Editor\2021.3.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

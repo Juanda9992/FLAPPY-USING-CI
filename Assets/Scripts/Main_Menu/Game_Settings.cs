@@ -14,12 +14,27 @@ public class Game_Settings : MonoBehaviour
     {
         if(!vSync)
         {
-            Application.targetFrameRate = 60;
+            if(Platform_Manager.isOnWindows())
+            {
+                QualitySettings.vSyncCount = 1;
+            }
+            else
+            {
+                Application.targetFrameRate = 60;
+            }
+            
             vSync = true;
         }
         else
         {
-            Application.targetFrameRate = 360;
+            if(Platform_Manager.isOnWindows())
+            {
+                QualitySettings.vSyncCount = 0;
+            }
+            else
+            {
+                Application.targetFrameRate = 120;
+            }
             vSync = false;
         }
     }

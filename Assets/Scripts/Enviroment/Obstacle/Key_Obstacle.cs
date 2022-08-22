@@ -14,7 +14,7 @@ public class Key_Obstacle : MonoBehaviour
 
     void Update()
     {
-        float sine = Mathf.Sin(Time.time * 3);
+        float sine = (Mathf.Sin(Time.time * 5)) * 0.7f;
         transform.localPosition =  new Vector2(transform.localPosition.x,sine);
     }
     void OnTriggerEnter2D(Collider2D other)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Revert_Obstacle : MonoBehaviour, IActivable
 {
@@ -20,7 +21,7 @@ public class Revert_Obstacle : MonoBehaviour, IActivable
         {
             switcher.ResetGravity();
             controller.ResetTime();
-            player.transform.position = new Vector2(0, player.transform.position.y);
+            player.transform.DOMove(Vector2.zero,0.3f);
         }
     }
 
