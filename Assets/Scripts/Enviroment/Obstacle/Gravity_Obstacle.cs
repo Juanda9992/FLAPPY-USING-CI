@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gravity_Obstacle : MonoBehaviour
+public class Gravity_Obstacle : MonoBehaviour, IActivable
 {
     [SerializeField]
     private Sprite invertGravitySprite, normalGravitySprite;
@@ -41,5 +41,10 @@ public class Gravity_Obstacle : MonoBehaviour
         {
             switcher.FlipGravity();
         }
+    }
+
+    public void OnActivate()
+    {
+        Color_Changer.ChangeSpriteColor(sRenderer);
     }
 }

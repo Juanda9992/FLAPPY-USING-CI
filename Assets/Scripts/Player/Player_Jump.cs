@@ -131,6 +131,10 @@ public class Player_Jump : MonoBehaviour
         {
             IncreaseScore();
         }
+        if(other.TryGetComponent<IActivable>(out IActivable activable))
+        {
+            activable.OnActivate();
+        }
     }
 
     public void resetPos()

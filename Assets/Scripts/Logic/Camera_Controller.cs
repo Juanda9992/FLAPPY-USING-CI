@@ -51,7 +51,7 @@ public class Camera_Controller : MonoBehaviour
     public void zoomOnDeath(Vector3 position)
     {
         DOTween.To(()=> Time.timeScale, x=> Time.timeScale = x, 0.3f,0.4f);
-        transform.DOMove(position - Vector3.forward,0.7f);
+        transform.DOMove(new Vector3(position.x,position.y,transform.position.z),0.7f);
         Camera.main.DOOrthoSize(6,0.4f);
     }
     public void Shake()

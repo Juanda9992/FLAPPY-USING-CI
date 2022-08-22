@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Time_Speed_Obstacle : MonoBehaviour
+public class Time_Speed_Obstacle : MonoBehaviour, IActivable
 {
     private Time_Speed_Controller time_Speed;
     [SerializeField]
@@ -49,5 +49,9 @@ public class Time_Speed_Obstacle : MonoBehaviour
         {
             sRenderer.sprite = slowSprite;
         }
+    }
+    public void OnActivate()
+    {
+        Color_Changer.ChangeSpriteColor(sRenderer);
     }
 }
