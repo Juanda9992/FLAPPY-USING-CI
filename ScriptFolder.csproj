@@ -79,6 +79,8 @@
      <Compile Include="Assets\Scripts\Enviroment\Background\Ground_Color.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Hearth_power_Up.cs" />
      <Compile Include="Assets\Scripts\Main_Menu\Game_Settings.cs" />
+     <Compile Include="Assets\Scripts\Logic\Audio_Manager.cs" />
+     <Compile Include="Assets\Scripts\Main_Menu\Main_Menu_Color.cs" />
      <None Include="Assets\Scripts\ScriptFolder.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Editor\2021.3.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

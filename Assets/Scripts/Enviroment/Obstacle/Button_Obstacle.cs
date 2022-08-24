@@ -34,6 +34,7 @@ public class Button_Obstacle : MonoBehaviour
         if(inTrigger)
         {
             door.SetActive(false);
+            Audio_Manager.instance.PlaySound("Door");
             sRenderer.color = pressedColor;
         }    
     }

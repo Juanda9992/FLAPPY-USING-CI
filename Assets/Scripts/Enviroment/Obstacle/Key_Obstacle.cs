@@ -22,6 +22,7 @@ public class Key_Obstacle : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             door.SetActive(false);
+            Audio_Manager.instance.PlaySound("Key");
             Destroy(this.gameObject);
         }
     }

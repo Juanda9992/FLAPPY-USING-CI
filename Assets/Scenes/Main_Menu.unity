@@ -1099,7 +1099,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 1200, y: 200}
+  m_SizeDelta: {x: 1500, y: 200}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &368504879
 MonoBehaviour:
@@ -1123,8 +1123,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: FLAPPY DASH
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 91a37cd57c7bde14aa070c3c80aea637, type: 2}
+  m_sharedMaterial: {fileID: 4722703943228664641, guid: 91a37cd57c7bde14aa070c3c80aea637, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2020,6 +2020,7 @@ GameObject:
   - component: {fileID: 555545286}
   - component: {fileID: 555545285}
   - component: {fileID: 555545284}
+  - component: {fileID: 555545287}
   m_Layer: 5
   m_Name: Play_Button
   m_TagString: Untagged
@@ -2141,6 +2142,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555545282}
   m_CullTransparentMesh: 1
+--- !u!114 &555545287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555545282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 516064018}
+          m_TargetAssemblyTypeName: UI_Animator, ScriptFolder
+          m_MethodName: AnimateButtonIn
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 555545282}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 516064018}
+          m_TargetAssemblyTypeName: UI_Animator, ScriptFolder
+          m_MethodName: AnimateButtonOut
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 555545282}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &577977249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2467,6 +2513,7 @@ GameObject:
   - component: {fileID: 677232495}
   - component: {fileID: 677232498}
   - component: {fileID: 677232496}
+  - component: {fileID: 677232499}
   m_Layer: 5
   m_Name: About_Button
   m_TagString: Untagged
@@ -2559,6 +2606,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677232494}
   m_CullTransparentMesh: 1
+--- !u!114 &677232499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677232494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 516064018}
+          m_TargetAssemblyTypeName: UI_Animator, ScriptFolder
+          m_MethodName: AnimateButtonIn
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 677232494}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 516064018}
+          m_TargetAssemblyTypeName: UI_Animator, ScriptFolder
+          m_MethodName: AnimateButtonOut
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 677232494}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &762369873
 GameObject:
   m_ObjectHideFlags: 0
@@ -3111,6 +3203,7 @@ GameObject:
   - component: {fileID: 1114510493}
   - component: {fileID: 1114510492}
   - component: {fileID: 1114510491}
+  - component: {fileID: 1114510494}
   m_Layer: 5
   m_Name: Stats_Button
   m_TagString: Untagged
@@ -3244,6 +3337,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114510489}
   m_CullTransparentMesh: 1
+--- !u!114 &1114510494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114510489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 516064018}
+          m_TargetAssemblyTypeName: UI_Animator, ScriptFolder
+          m_MethodName: AnimateButtonIn
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1114510489}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 516064018}
+          m_TargetAssemblyTypeName: UI_Animator, ScriptFolder
+          m_MethodName: AnimateButtonOut
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1114510489}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1129227220
 GameObject:
   m_ObjectHideFlags: 0
@@ -4408,6 +4546,7 @@ GameObject:
   - component: {fileID: 1404440663}
   - component: {fileID: 1404440662}
   - component: {fileID: 1404440661}
+  - component: {fileID: 1404440664}
   m_Layer: 5
   m_Name: Settings_Button
   m_TagString: Untagged
@@ -4529,6 +4668,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404440659}
   m_CullTransparentMesh: 1
+--- !u!114 &1404440664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404440659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 516064018}
+          m_TargetAssemblyTypeName: UI_Animator, ScriptFolder
+          m_MethodName: AnimateButtonIn
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1404440659}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 516064018}
+          m_TargetAssemblyTypeName: UI_Animator, ScriptFolder
+          m_MethodName: AnimateButtonOut
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1404440659}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1504784401
 GameObject:
   m_ObjectHideFlags: 0
@@ -5666,6 +5850,7 @@ GameObject:
   - component: {fileID: 2059292335}
   - component: {fileID: 2059292334}
   - component: {fileID: 2059292333}
+  - component: {fileID: 2059292336}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5739,6 +5924,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2059292336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059292332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b523fdff041c0458b2a20faeab480e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textObject: {fileID: 368504877}
 --- !u!1 &2115097640
 GameObject:
   m_ObjectHideFlags: 0
@@ -5884,6 +6082,7 @@ GameObject:
   - component: {fileID: 2147118656}
   - component: {fileID: 2147118655}
   - component: {fileID: 2147118654}
+  - component: {fileID: 2147118657}
   m_Layer: 5
   m_Name: Icon_Selection_Button
   m_TagString: Untagged
@@ -6005,3 +6204,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2147118652}
   m_CullTransparentMesh: 1
+--- !u!114 &2147118657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147118652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 516064018}
+          m_TargetAssemblyTypeName: UI_Animator, ScriptFolder
+          m_MethodName: AnimateButtonIn
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2147118652}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 516064018}
+          m_TargetAssemblyTypeName: UI_Animator, ScriptFolder
+          m_MethodName: AnimateButtonOut
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2147118652}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

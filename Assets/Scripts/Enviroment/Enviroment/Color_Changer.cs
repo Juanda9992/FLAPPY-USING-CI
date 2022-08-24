@@ -25,6 +25,7 @@ public class Color_Changer : MonoBehaviour
     }
     public static void ChangeSpriteColor(SpriteRenderer renderer)
     {
+        Audio_Manager.instance.PlaySound("Portal");
         renderer.color = Color.black;
         renderer.DOColor(Color.white,1);
     }
