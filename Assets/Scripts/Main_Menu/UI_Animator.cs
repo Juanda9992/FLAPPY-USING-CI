@@ -15,4 +15,13 @@ public class UI_Animator : MonoBehaviour
         objectToShrink.gameObject.SetActive(true);
         objectToShrink.transform.DOScale(Vector2.one,0.3f);
     }
+
+    public void AnimateButtonIn(GameObject button)
+    {
+        button.transform.DOScale(Vector2.one * 1.4f,0.2f);
+    }
+    public void AnimateButtonOut(GameObject button)
+    {
+        button.transform.DOScale(Vector2.one,0.2f);
+    }
 }

@@ -8,6 +8,7 @@ public class Hearth_power_Up : MonoBehaviour, IPickable
     {
         GameObject.FindObjectOfType<Player_Jump>().health ++;
         Stats_Handler.stats_Handler_inst.totalHearts++;
+        Audio_Manager.instance.PlaySound("PowerUp");
         Destroy(this.gameObject);
     }
 }

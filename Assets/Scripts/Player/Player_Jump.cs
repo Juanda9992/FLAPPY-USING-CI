@@ -112,7 +112,7 @@ public class Player_Jump : MonoBehaviour
 
     private void Death()
     {
-        
+        Audio_Manager.instance.PlaySound("Death");
         onPlayerDeath?.Invoke();
         if(!hasDeath)
         {
