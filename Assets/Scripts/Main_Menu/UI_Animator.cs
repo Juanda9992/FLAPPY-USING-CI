@@ -24,4 +24,10 @@ public class UI_Animator : MonoBehaviour
     {
         button.transform.DOScale(Vector2.one,0.2f);
     }
+
+    public void PlaySelectSound()
+    {
+        Audio_Manager.instance.PlaySound("Select");
+    }
+    
 }

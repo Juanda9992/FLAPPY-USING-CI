@@ -6,7 +6,7 @@ public class Audio_Manager : MonoBehaviour
 {
     public static Audio_Manager instance;
 
-    public static AudioClip death,key,door,portal,powerUp;
+    public static AudioClip death,key,door,portal,powerUp,hit,bomb,select;
     private static AudioSource source;
     // Start is called before the first frame update
     void Start()
@@ -26,6 +26,9 @@ public class Audio_Manager : MonoBehaviour
         door = Resources.Load<AudioClip>("Door");
         powerUp = Resources.Load<AudioClip>("PowerUp");
         key = Resources.Load<AudioClip>("Key");
+        hit = Resources.Load<AudioClip>("Hit");
+        select = Resources.Load<AudioClip>("Select");
+        bomb = Resources.Load<AudioClip>("Bomb");
     }
 
     public void PlaySound(string sound)
@@ -46,6 +49,15 @@ public class Audio_Manager : MonoBehaviour
                 break;
             case "Key":
                 source.PlayOneShot(key);
+                break;
+            case "Hit":
+                source.PlayOneShot(hit);
+                break;
+            case "Select":
+                source.PlayOneShot(select);
+                break;
+            case "Bomb":
+                source.PlayOneShot(bomb);
                 break;
             default:
                 Debug.Log("No sound avaliable for" + sound);
