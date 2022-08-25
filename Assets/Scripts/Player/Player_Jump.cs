@@ -104,6 +104,7 @@ public class Player_Jump : MonoBehaviour
             }
             else
             {
+                Audio_Manager.instance.PlaySound("Hit");
                 Destroy(other.gameObject);
                 Camera.main.GetComponent<Camera_Controller>().Shake();
             }

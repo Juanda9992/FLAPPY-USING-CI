@@ -7,7 +7,7 @@ using System;
 using TMPro;
 public class HotBar_UI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI heartText;
+    [SerializeField] private TextMeshProUGUI heartText, bombText;
     private Player_Shoot shoot;
     private Player_Jump player;
     [SerializeField] private CanvasGroup button;
@@ -26,6 +26,7 @@ public class HotBar_UI : MonoBehaviour
 
     void Update()
     {
+        bombText.text = shoot.ammo.ToString();
         heartText.text = player.health.ToString();
     }
 

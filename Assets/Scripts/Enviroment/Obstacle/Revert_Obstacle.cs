@@ -21,7 +21,7 @@ public class Revert_Obstacle : MonoBehaviour, IActivable
         {
             switcher.ResetGravity();
             controller.ResetTime();
-            player.transform.DOMove(Vector2.zero,0.3f);
+            player.transform.DOMove(new Vector2(0,transform.position.y),0.4f);
         }
     }
 

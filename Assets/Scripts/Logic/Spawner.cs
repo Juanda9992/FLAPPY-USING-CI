@@ -16,10 +16,12 @@ public class Spawner : MonoBehaviour
     [HideInInspector]
     public int lastNumber;
     private bool isSpawning = true;
+    private Transform player;
     private Time_Speed_Controller timeController;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         currentTimeBetweenSpawn = timeBetweenSpawn / 2;
         timeController = GameObject.FindObjectOfType<Time_Speed_Controller>();
 
@@ -75,18 +77,6 @@ public class Spawner : MonoBehaviour
                     number = Random.Range(0,obstaclePrefabs.Length);
                 }
             }
-            return number;
-        }
-        else    
-        {        
-            int number = Random.Range(0,8);
-            if(lastNumber == 2)
-            {
-                while(number == 3 || number == 4)
-                {
-                    number = Random.Range(0,obstaclePrefabs.Length);
-                }
-            }
             else if((lastNumber == 7) && (number ==7))
             {
                 while(number == 7)
@@ -103,12 +93,35 @@ public class Spawner : MonoBehaviour
             }
             else if(lastNumber == 9)
             {
-                while((number == 9) && (Time.timeScale == 1))
+                while((number == 9) && (Time.timeScale != 1))
                 {
                     number = Random.Range(0,obstaclePrefabs.Length);
                 }
             }
-
+            else if(lastNumber == 10)
+            {
+                if(player.position.x == 0 || number == 4 || number == 3)
+                {
+                    while(number == 10)
+                    {
+                        number = Random.Range(0,obstaclePrefabs.Length);
+                    }
+                }
+            }
+            return number;
+        }
+            
+        else    
+        {        
+            int number = Random.Range(0,8);
+            if(lastNumber == 2)
+            {
+                while(number == 3 || number == 4)
+                {
+                    number = Random.Range(0,obstaclePrefabs.Length);
+                }
+            }
+            
             return number;
         }
 
