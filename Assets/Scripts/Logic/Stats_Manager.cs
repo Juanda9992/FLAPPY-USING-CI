@@ -16,7 +16,7 @@ public class Stats_Manager : MonoBehaviour
     public void UpdateText()
     {
         Stats_Handler.stats_Handler_inst.ReadStats();
-        playTime.text = "Total Play Time: " + Stats_Handler.stats_Handler_inst.totalPlayTime.ToString("F0");
+        playTime.text = "Total Play Time: " + (Stats_Handler.stats_Handler_inst.totalPlayTime / 60).ToString("F2") + "minutes";
         jumps.text = "Total Jumps: " + Stats_Handler.stats_Handler_inst.totalJumps;
         score.text = "Total Score: " + Stats_Handler.stats_Handler_inst.totalScore;
         highScore.text = "Highest Score: " + Stats_Handler.stats_Handler_inst.highestScore;
