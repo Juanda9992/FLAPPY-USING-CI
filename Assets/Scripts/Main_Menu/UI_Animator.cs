@@ -29,5 +29,10 @@ public class UI_Animator : MonoBehaviour
     {
         Audio_Manager.instance.PlaySound("Select");
     }
+    public void PlaySound()
+    {
+        Audio_Manager.instance.FadeMusicVolumeIn(0.5f);
+        Audio_Manager.instance.PlaySound("ChangeMenu");
+    }
     
 }

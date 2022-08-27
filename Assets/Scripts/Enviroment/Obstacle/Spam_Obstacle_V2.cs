@@ -27,6 +27,10 @@ public class Spam_Obstacle_V2 : MonoBehaviour
         clicksText.text = randomClicks.ToString();
         if(randomClicks <=0)
         {
+            if(wallObject.activeSelf)
+            {
+                Audio_Manager.instance.PlaySound("Door");
+            }
             wallObject.SetActive(false);
         }
     }

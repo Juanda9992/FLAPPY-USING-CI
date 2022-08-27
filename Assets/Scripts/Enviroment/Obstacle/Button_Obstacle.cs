@@ -33,8 +33,11 @@ public class Button_Obstacle : MonoBehaviour
     {
         if(inTrigger)
         {
+            if(door.activeSelf)
+            {
+                Audio_Manager.instance.PlaySound("Door");
+            }
             door.SetActive(false);
-            Audio_Manager.instance.PlaySound("Door");
             sRenderer.color = pressedColor;
         }    
     }

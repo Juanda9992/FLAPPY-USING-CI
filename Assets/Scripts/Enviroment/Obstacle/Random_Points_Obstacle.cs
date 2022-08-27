@@ -26,6 +26,7 @@ public class Random_Points_Obstacle : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             Player_Jump player = GameObject.FindObjectOfType<Player_Jump>(); 
+            Audio_Manager.instance.PlaySound("Portal");
             for(int i = 0;i < score ;i++)
             {
                 player.IncreaseScore();

@@ -41,6 +41,14 @@ public class Save_Manager : MonoBehaviour
         {
             PlayerPrefs.SetInt("TotalHearts",0);
         }
+        if(!PlayerPrefs.HasKey("sfxVol"))
+        {
+            PlayerPrefs.SetFloat("sfxVol",0);
+        }
+        if(!PlayerPrefs.HasKey("musicVol"))
+        {
+            PlayerPrefs.SetFloat("musicVol",0);
+        }
 
     }
 

@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Game_Settings : MonoBehaviour
 {
-    private bool vSync = false;
+    [SerializeField] private Slider sxfSlider,musicSlider;
+    private bool vSync = true;
 
-    private void Start() 
-    {
-        ToggleVSync();  
-    }
+
     public void ToggleVSync()
     {
         if(!vSync)
@@ -37,5 +35,28 @@ public class Game_Settings : MonoBehaviour
             }
             vSync = false;
         }
+    }
+
+    public void ChangeVolumeSlider(float volume)
+    {
+        Audio_Manager.instance.ChangeVolume(volume * volume);
+        PlayerPrefs.SetFloat("sfxVol",volume * volume);
+    }
+
+    public void ChangeMusicSlider(float volume)
+    {
+        Audio_Manager.instance.ChangeVolume(volume,false);
+        PlayerPrefs.SetFloat("musicVol",volume);
+    }
+
+    public void ReadVolumeValues()
+    {
+        sxfSlider.value = PlayerPrefs.GetFloat("sfxVol");
+        musicSlider.value = PlayerPrefs.GetFloat("musicVol");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
