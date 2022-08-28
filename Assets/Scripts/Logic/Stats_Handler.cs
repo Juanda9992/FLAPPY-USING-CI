@@ -55,4 +55,13 @@ public class Stats_Handler : MonoBehaviour
     {
         SetStats();    
     }
+
+    private void OnEnable() 
+    {
+        Save_Manager.OnProgressDeleted +=ReadStats;    
+    }
+    private void OnDisable() 
+    {
+        Save_Manager.OnProgressDeleted -=ReadStats;    
+    }
 }
