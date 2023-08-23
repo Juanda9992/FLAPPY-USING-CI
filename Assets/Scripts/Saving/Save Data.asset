@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0cf71460774b5448c583a8ba7e7373, type: 3}
   m_Name: Save Data
   m_EditorClassIdentifier: 
-  musicVolume: 0
-  sfxVolume: 0
-  vSyncActive: 0
+  spriteIndex: 0
+  musicVolume: -32.415604
+  sfxVolume: -80
+  vSyncActive: 1

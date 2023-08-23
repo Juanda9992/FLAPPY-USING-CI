@@ -30,7 +30,6 @@ public class Player_Jump : MonoBehaviour
         gravity_Switcher = FindObjectOfType<Gravity_Switcher>();
         rb = GetComponent<Rigidbody2D>();
         firstPos = transform.position;
-        sRenderer.sprite = GetSprite();
         camera_Controller = GameObject.FindObjectOfType<Camera_Controller>();
     }
 
@@ -89,10 +88,6 @@ public class Player_Jump : MonoBehaviour
         }
     }
 
-    private Sprite GetSprite()
-    {
-        return Sprite_Holder.sprite_Holder_inst.currentSprite;
-    }
     void OnCollisionEnter2D(Collision2D other)
     {
         if(other.transform.CompareTag("Lethal"))

@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Camera_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Spam_Obstacle_V2.cs" />
      <Compile Include="Assets\Scripts\Logic\Scene_Loader.cs" />
+     <Compile Include="Assets\Scripts\Saving\SaveModel.cs" />
      <Compile Include="Assets\Scripts\Logic\Stats_Manager.cs" />
      <Compile Include="Assets\Scripts\Logic\Stats_Handler.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Random_Points_Obstacle.cs" />
@@ -67,6 +68,7 @@
      <Compile Include="Assets\Scripts\Enviroment\Enviroment\Gravity_Switcher.cs" />
      <Compile Include="Assets\Scripts\Logic\Game_State.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Background\Background_Movement.cs" />
+     <Compile Include="Assets\Scripts\Saving\SaveDataHolder.cs" />
      <Compile Include="Assets\Scripts\UI\Icon_Selection_Menu\Sprite_Holder.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IPickable.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Toggle_Obstacle.cs" />
@@ -81,8 +83,6 @@
      <Compile Include="Assets\Scripts\Enviroment\Background\Ground_Color.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Hearth_power_Up.cs" />
      <Compile Include="Assets\Scripts\Main_Menu\Game_Settings.cs" />
-     <Compile Include="Assets\Scripts\Saving\SaveModel.cs" />
-     <Compile Include="Assets\Scripts\Saving\SaveDataHolder.cs" />
      <None Include="Assets\Scripts\ScriptFolder.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity\2021.3.29f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

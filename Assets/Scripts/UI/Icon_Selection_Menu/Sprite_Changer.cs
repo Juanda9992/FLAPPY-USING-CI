@@ -6,22 +6,22 @@ public class Sprite_Changer : MonoBehaviour
 {
     public SpriteRenderer sRenderer;
     [SerializeField] private Sprite defaultSprite;
+    private SaveDataHolder dataHolder;
     // Start is called before the first frame update
     void Start()
     {
-        sRenderer = GetComponent<SpriteRenderer>();
-        sRenderer.sprite = Sprite_Holder.sprite_Holder_inst.currentSprite;     
+        dataHolder = GameObject.FindObjectOfType<SaveDataHolder>();
+        sRenderer = GetComponent<SpriteRenderer>();    
     }
 
     public void ChangeSprite(Image spriteImage)
     {
         sRenderer.sprite = spriteImage.sprite;
-        Sprite_Holder.sprite_Holder_inst.currentSprite = spriteImage.sprite;
     }
 
     public void SaveSprite(int spriteIndex)
     {
-        PlayerPrefs.SetInt("Icon",spriteIndex);
+        dataHolder.data.spriteIndex = spriteIndex;
     }
 
 }
