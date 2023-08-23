@@ -9,6 +9,8 @@ public class Game_Settings : MonoBehaviour
     private void Start() 
     {
         vSyncToggle.isOn = SaveDataHolder.instance.data.vSyncActive;
+        sxfSlider.value = SaveDataHolder.instance.data.sfxVolume;
+        musicSlider.value = SaveDataHolder.instance.data.musicVolume;
         ToggleVSync();
     }
     public void ToggleVSync()
@@ -27,20 +29,14 @@ public class Game_Settings : MonoBehaviour
 
     public void ChangeVolumeSlider(float volume)
     {
-        Audio_Manager.instance.ChangeVolume(volume * volume);
-        PlayerPrefs.SetFloat("sfxVol",volume * volume);
+        Audio_Manager.instance.ChangeVolume(volume);
+        SaveDataHolder.instance.data.sfxVolume = volume;
     }
 
     public void ChangeMusicSlider(float volume)
     {
         Audio_Manager.instance.ChangeVolume(volume,false);
-        PlayerPrefs.SetFloat("musicVol",volume);
-    }
-
-    public void ReadVolumeValues()
-    {
-        sxfSlider.value = PlayerPrefs.GetFloat("sfxVol");
-        musicSlider.value = PlayerPrefs.GetFloat("musicVol");
+        SaveDataHolder.instance.data.musicVolume = volume;
     }
 
     public void Quit()

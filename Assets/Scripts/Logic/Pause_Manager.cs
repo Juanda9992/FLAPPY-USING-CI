@@ -34,7 +34,6 @@ public class Pause_Manager : MonoBehaviour
             playerJump.enabled = false; //Disables the player input
             lastTimeScale = Time.timeScale;
             isPaused = true; 
-            settings.ReadVolumeValues();
             Time.timeScale = 0; //Freezes the game
             pausePanel.SetActive(true); //Enables the panel
         }

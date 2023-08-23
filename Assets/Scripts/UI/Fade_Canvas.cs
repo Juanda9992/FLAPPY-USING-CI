@@ -49,7 +49,6 @@ public class Fade_Canvas : MonoBehaviour
                 Audio_Manager.instance.ChangeMusic(false);
             }
         }
-        Audio_Manager.instance.SetVolume();
     }
 
 }

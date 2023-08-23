@@ -14,9 +14,8 @@ public class Audio_Manager : MonoBehaviour
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioMixerGroup sfx, music;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        SetVolume();
         if(instance == null)
         {
             instance = this;
@@ -116,11 +115,5 @@ public class Audio_Manager : MonoBehaviour
             musicSource.Stop();
             musicSource.Play();
         }
-    }
-
-    public void SetVolume()
-    {
-        sfx.audioMixer.SetFloat("sfxVol",PlayerPrefs.GetFloat("sfxVol"));
-        music.audioMixer.SetFloat("musicVol",PlayerPrefs.GetFloat("musicVol"));
     }
 }
