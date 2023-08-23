@@ -4,6 +4,7 @@ using UnityEngine;
 public class SaveModel : ScriptableObject 
 {
     public int totalJumps;
+    public int totalDeaths;
 
     public int spriteIndex;
     [Header("Settings")]

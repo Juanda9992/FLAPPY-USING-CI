@@ -119,7 +119,7 @@ public class Player_Jump : MonoBehaviour
             rb.velocity = Vector2.zero;
             camera_Controller.zoomOnDeath(transform.position);
             hasDeath = true;
-            Stats_Handler.stats_Handler_inst.totalDeaths ++;
+            save.totalDeaths++;
         }
     }
 
