@@ -2323,6 +2323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sRenderer: {fileID: 0}
+  allSprites: {fileID: 11400000, guid: 9ad1aed9210336e42bd39c00bf770a45, type: 2}
   defaultSprite: {fileID: 0}
 --- !u!212 &1061376228
 SpriteRenderer:
