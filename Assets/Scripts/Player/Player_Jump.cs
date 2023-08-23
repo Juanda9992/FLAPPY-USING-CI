@@ -147,7 +147,7 @@ public class Player_Jump : MonoBehaviour
     
     private void IncreasePlayTime()
     {
-        Stats_Handler.stats_Handler_inst.totalPlayTime += Time.deltaTime;
+        save.totalTime += Time.deltaTime;
     }
     public void IncreaseScore()
     {

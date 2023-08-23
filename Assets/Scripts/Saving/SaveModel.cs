@@ -5,6 +5,7 @@ public class SaveModel : ScriptableObject
 {
     public int totalJumps;
     public int totalDeaths;
+    public float totalTime;
 
     public int spriteIndex;
     [Header("Settings")]
