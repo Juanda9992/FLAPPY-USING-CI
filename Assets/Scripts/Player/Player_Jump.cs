@@ -5,6 +5,8 @@ using DG.Tweening;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player_Jump : MonoBehaviour
 {
+    [SerializeField] private SaveModel save;
+
     public delegate void onDeath();
     public delegate void onJumped();
     public delegate void onScore();
@@ -62,7 +64,7 @@ public class Player_Jump : MonoBehaviour
             jumping = false;
             transform.DOShakeScale(0.1f,0.5f).OnComplete(()=> transform.localScale = Vector2.one);
             rb.velocity = Vector2.up * jumpVelocity * gravity_Switcher.gravityAxis;
-            Stats_Handler.stats_Handler_inst.totalJumps++;
+            save.totalJumps++;
         }
         if(gravity_Switcher.gravityAxis >0)
         {

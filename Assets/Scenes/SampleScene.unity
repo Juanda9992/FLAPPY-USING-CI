@@ -1227,6 +1227,7 @@ GameObject:
   - component: {fileID: 395246216}
   - component: {fileID: 395246220}
   - component: {fileID: 395246221}
+  - component: {fileID: 395246222}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Player
@@ -1361,6 +1362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 039d4e08fb51fa64b90992eb0bef8cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  save: {fileID: 11400000, guid: 948889f135266694c9e0ac042f6caeec, type: 2}
   jumpVelocity: 16
   health: 1
 --- !u!114 &395246221
@@ -1377,6 +1379,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6217726788085823853, guid: 4f18f5571e8293b44ade8b901757f0af, type: 3}
   ammo: 0
+--- !u!114 &395246222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395246215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7d3029998de7841be4be9a2e48877e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allSprites: {fileID: 11400000, guid: 9ad1aed9210336e42bd39c00bf770a45, type: 2}
+  data: {fileID: 11400000, guid: 948889f135266694c9e0ac042f6caeec, type: 2}
 --- !u!1 &418441614
 GameObject:
   m_ObjectHideFlags: 0
