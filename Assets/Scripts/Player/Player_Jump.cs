@@ -47,7 +47,7 @@ public class Player_Jump : MonoBehaviour
 
         }
 
-        if(transform.position.x < -14)
+        if(transform.position.x < -14 && !hasDeath)
         {
             Death();
         }
