@@ -69,7 +69,6 @@
      <Compile Include="Assets\Scripts\Logic\Game_State.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Background\Background_Movement.cs" />
      <Compile Include="Assets\Scripts\Saving\SaveDataHolder.cs" />
-     <Compile Include="Assets\Scripts\UI\Icon_Selection_Menu\Sprite_Holder.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IPickable.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Toggle_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Moving_Obstacle.cs" />
@@ -83,6 +82,7 @@
      <Compile Include="Assets\Scripts\Enviroment\Background\Ground_Color.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Hearth_power_Up.cs" />
      <Compile Include="Assets\Scripts\Main_Menu\Game_Settings.cs" />
+     <Compile Include="Assets\Scripts\Icon_Selection\DataSprite.cs" />
      <None Include="Assets\Scripts\ScriptFolder.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity\2021.3.29f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
