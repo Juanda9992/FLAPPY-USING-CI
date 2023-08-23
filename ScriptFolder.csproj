@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\Power_Ups\Hearth_power_Up.cs" />
      <Compile Include="Assets\Scripts\Main_Menu\Game_Settings.cs" />
      <Compile Include="Assets\Scripts\Icon_Selection\DataSprite.cs" />
+     <Compile Include="Assets\Scripts\Player\PLayer_Sprite.cs" />
      <None Include="Assets\Scripts\ScriptFolder.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity\2021.3.29f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
