@@ -5,36 +5,24 @@ using UnityEngine.UI;
 public class Game_Settings : MonoBehaviour
 {
     [SerializeField] private Slider sxfSlider,musicSlider;
-    private bool vSync = true;
-
-
+    [SerializeField] private Toggle vSyncToggle;
+    private void Start() 
+    {
+        vSyncToggle.isOn = SaveDataHolder.instance.data.vSyncActive;
+        ToggleVSync();
+    }
     public void ToggleVSync()
     {
-        if(!vSync)
+        if(vSyncToggle.isOn)
         {
-            if(Platform_Manager.isOnWindows())
-            {
-                QualitySettings.vSyncCount = 1;
-            }
-            else
-            {
-                Application.targetFrameRate = 60;
-            }
-            
-            vSync = true;
+            QualitySettings.vSyncCount = 1;
         }
         else
         {
-            if(Platform_Manager.isOnWindows())
-            {
-                QualitySettings.vSyncCount = 0;
-            }
-            else
-            {
-                Application.targetFrameRate = 120;
-            }
-            vSync = false;
+            QualitySettings.vSyncCount = 0;
         }
+        SaveDataHolder.instance.data.vSyncActive = vSyncToggle.isOn;
+        Debug.Log(QualitySettings.vSyncCount);
     }
 
     public void ChangeVolumeSlider(float volume)
