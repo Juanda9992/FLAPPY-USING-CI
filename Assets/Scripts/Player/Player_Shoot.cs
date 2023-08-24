@@ -31,6 +31,7 @@ public class Player_Shoot : MonoBehaviour
         {
             Audio_Manager.instance.PlaySound("Bomb");
             Instantiate(bulletPrefab,new Vector2(transform.position.x +1, transform.position.y),Quaternion.identity);
+            SaveDataHolder.instance.data.bombsShoot++;
             CheckForAmmo();
         }
         

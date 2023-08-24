@@ -8,6 +8,8 @@ public class SaveModel : ScriptableObject
     public float totalTime;
 
     public int heartsTaken;
+    public int bombsTaken;
+    public int bombsShoot;
 
     public int spriteIndex;
     [Header("Settings")]
