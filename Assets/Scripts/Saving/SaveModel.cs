@@ -7,6 +7,8 @@ public class SaveModel : ScriptableObject
     public int totalDeaths;
     public float totalTime;
 
+    public int heartsTaken;
+
     public int spriteIndex;
     [Header("Settings")]
     [Range(-80,0)]
