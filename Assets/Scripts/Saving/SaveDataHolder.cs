@@ -10,4 +10,9 @@ public class SaveDataHolder : MonoBehaviour
     {
         instance = this;
     }
+
+    public void Save()
+    {
+        
+    }
 }

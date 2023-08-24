@@ -44,6 +44,7 @@
      <Compile Include="Assets\Scripts\UI\Button_UI_Script.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Bullet.cs" />
      <Compile Include="Assets\Scripts\Logic\Audio_Manager.cs" />
+     <Compile Include="Assets\Scripts\Player\PLayer_Sprite.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Spam_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Key_Obstacle.cs" />
      <Compile Include="Assets\Scripts\UI\Game_UI\Score_UI.cs" />
@@ -73,6 +74,7 @@
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Toggle_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Moving_Obstacle.cs" />
      <Compile Include="Assets\Scripts\UI\Game_UI\GameOver_UI.cs" />
+     <Compile Include="Assets\Scripts\Icon_Selection\DataSprite.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Power_Up_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Logic\Camera_Controller.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Background_Changer_Obstacle.cs" />
@@ -82,8 +84,6 @@
      <Compile Include="Assets\Scripts\Enviroment\Background\Ground_Color.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Hearth_power_Up.cs" />
      <Compile Include="Assets\Scripts\Main_Menu\Game_Settings.cs" />
-     <Compile Include="Assets\Scripts\Icon_Selection\DataSprite.cs" />
-     <Compile Include="Assets\Scripts\Player\PLayer_Sprite.cs" />
      <None Include="Assets\Scripts\ScriptFolder.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity\2021.3.29f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

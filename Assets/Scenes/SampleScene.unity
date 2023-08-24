@@ -10215,6 +10215,7 @@ GameObject:
   - component: {fileID: 1847239980}
   - component: {fileID: 1847239982}
   - component: {fileID: 1847239983}
+  - component: {fileID: 1847239984}
   m_Layer: 0
   m_Name: Main
   m_TagString: Untagged
@@ -10332,6 +10333,19 @@ MonoBehaviour:
   sxfSlider: {fileID: 584815742}
   musicSlider: {fileID: 1039031301}
   vSyncToggle: {fileID: 0}
+--- !u!114 &1847239984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847239975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8ca6b224b7b1e4fa5e5defe6ef5ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 948889f135266694c9e0ac042f6caeec, type: 2}
 --- !u!1 &1864049490
 GameObject:
   m_ObjectHideFlags: 0
