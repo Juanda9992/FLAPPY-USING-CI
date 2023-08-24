@@ -7,6 +7,8 @@ public class SaveModel : ScriptableObject
     public int totalDeaths;
     public float totalTime;
 
+    public int highestScore;
+    public int totalScore;
     public int heartsTaken;
     public int bombsTaken;
     public int bombsShoot;

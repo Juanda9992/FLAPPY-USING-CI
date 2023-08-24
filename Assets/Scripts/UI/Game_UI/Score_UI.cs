@@ -10,13 +10,18 @@ public class Score_UI : MonoBehaviour
     public int score;
     private int maxScore;
     private int maxScoreSession = 0;
+
+    private void Start() 
+    {
+        Save();    
+    }
     private void IncreaseScore()
     {
         score++;
-        Stats_Handler.stats_Handler_inst.totalScore++;
-        if(score > maxScoreSession)
+        SaveDataHolder.instance.data.totalScore++;
+        if(score > maxScore)
         {
-            maxScoreSession = score;
+            maxScore = score;
         }
         Save();
         scoreText.text = score.ToString();
@@ -42,12 +47,12 @@ public class Score_UI : MonoBehaviour
 
     private void Save()
     {
-        maxScore= PlayerPrefs.GetInt("MaxScore");
-        if(maxScoreSession > maxScore)
+        maxScore= SaveDataHolder.instance.data.highestScore;
+        if(score > maxScore)
         {
-            PlayerPrefs.SetInt("MaxScore",maxScoreSession);
+            SaveDataHolder.instance.data.highestScore = score;
         }
 
-        Debug.Log(maxScore + " " + maxScoreSession);
+        Debug.Log(maxScore + " " + score);
     }
 }
