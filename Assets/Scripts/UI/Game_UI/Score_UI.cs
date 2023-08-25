@@ -52,7 +52,5 @@ public class Score_UI : MonoBehaviour
         {
             SaveDataHolder.instance.data.highestScore = score;
         }
-
-        Debug.Log(maxScore + " " + score);
     }
 }

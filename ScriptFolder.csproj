@@ -81,6 +81,7 @@
      <Compile Include="Assets\Scripts\UI\Fade_Canvas.cs" />
      <Compile Include="Assets\Scripts\Main_Menu\Main_Menu_Color.cs" />
      <Compile Include="Assets\Scripts\UI\Game_UI\HotBar_UI.cs" />
+     <Compile Include="Assets\Scripts\Saving\SaveManager.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Background\Ground_Color.cs" />
      <Compile Include="Assets\Scripts\Power_Ups\Hearth_power_Up.cs" />
      <Compile Include="Assets\Scripts\Main_Menu\Game_Settings.cs" />
@@ -366,6 +367,9 @@
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
         <HintPath>D:\Unity\FLAPPY-USING-CI\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+        <HintPath>D:\Unity\FLAPPY-USING-CI\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
         <HintPath>D:\Unity\2021.3.29f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
