@@ -26,7 +26,10 @@ public class SaveManager : MonoBehaviour
     public void Load()
     {
         string json =PlayerPrefs.GetString("json"); 
-        JsonConvert.PopulateObject(json,saveModel);
+        if(json != string.Empty && json != null)
+        {
+            JsonConvert.PopulateObject(json,saveModel);
+        }
     }
     public IEnumerator Save()
     {

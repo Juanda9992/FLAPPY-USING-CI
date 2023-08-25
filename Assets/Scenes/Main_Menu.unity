@@ -2188,6 +2188,7 @@ MonoBehaviour:
   sxfSlider: {fileID: 2114770565}
   musicSlider: {fileID: 1833293178}
   vSyncToggle: {fileID: 1509032196}
+  deleteProgresdsButton: {fileID: 1504784403}
 --- !u!1 &543488676
 GameObject:
   m_ObjectHideFlags: 0
