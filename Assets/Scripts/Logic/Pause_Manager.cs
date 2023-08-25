@@ -17,17 +17,15 @@ public class Pause_Manager : MonoBehaviour
     void Start()
     {
         playerJump = GameObject.FindObjectOfType<Player_Jump>(); //The player class
-        volume.value = saveData.sfxVolume;
-        music.value = saveData.musicVolume;
 
     }
     public void PauseGame()
     {
 
-        Audio_Manager.instance.FadeMusicVolumeOut(0.5f);
 
         if(isPaused)
         {
+            Audio_Manager.instance.FadeMusicVolumeOut(0.5f);
             isPaused = false; //Switch bool
             Time.timeScale = lastTimeScale; //Last Time scale (if you touch a speed and pause - resume the game it will keep the same timeScale)
             pausePanel.SetActive(false); //Disables the panel
@@ -35,6 +33,7 @@ public class Pause_Manager : MonoBehaviour
         }
         else
         {
+            Audio_Manager.instance.FadeMusicVolumeIn(0.5f);
             playerJump.enabled = false; //Disables the player input
             lastTimeScale = Time.timeScale;
             isPaused = true; 

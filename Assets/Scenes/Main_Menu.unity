@@ -2103,7 +2103,6 @@ GameObject:
   - component: {fileID: 516064019}
   - component: {fileID: 516064020}
   - component: {fileID: 516064018}
-  - component: {fileID: 516064021}
   - component: {fileID: 516064022}
   - component: {fileID: 516064023}
   m_Layer: 0
@@ -2150,18 +2149,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b95b6a3b7cb5df4c95eb9705345bab6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &516064021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 516064017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31d08731a3b22b448aaa404fc3707f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &516064022
@@ -3899,7 +3886,6 @@ GameObject:
   - component: {fileID: 1135765790}
   - component: {fileID: 1135765789}
   - component: {fileID: 1135765788}
-  - component: {fileID: 1135765787}
   - component: {fileID: 1135765786}
   - component: {fileID: 1135765785}
   m_Layer: 5
@@ -3935,6 +3921,7 @@ MonoBehaviour:
   musicSource: {fileID: 1724263178}
   sfx: {fileID: 24300002, guid: 820e1f993274abf48a56f8256f2de70c, type: 2}
   music: {fileID: 24300002, guid: 31a91004ff177ca4a93758ea9f80f9a6, type: 2}
+  model: {fileID: 11400000, guid: 948889f135266694c9e0ac042f6caeec, type: 2}
 --- !u!82 &1135765786
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4031,25 +4018,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1135765787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135765784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bd3608ab94d9e14fbd5cc7cad8a0231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalPlayTime: 0
-  totalJumps: 0
-  totalScore: 0
-  highestScore: 0
-  totalDeaths: 0
-  totalBombs: 0
-  totalHearts: 0
 --- !u!114 &1135765788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6086,7 +6054,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 516064021}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Save_Manager, ScriptFolder
         m_MethodName: DeleteProgress
         m_Mode: 1
@@ -8353,6 +8321,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textObject: {fileID: 368504877}
+--- !u!1 &2092669109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2092669111}
+  - component: {fileID: 2092669110}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2092669110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092669109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83934346426883d46b8ed6feccd37b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveModel: {fileID: 11400000, guid: 948889f135266694c9e0ac042f6caeec, type: 2}
+--- !u!4 &2092669111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092669109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2110147112
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,7 +24,6 @@ public class Game_Settings : MonoBehaviour
             QualitySettings.vSyncCount = 0;
         }
         SaveDataHolder.instance.data.vSyncActive = vSyncToggle.isOn;
-        Debug.Log(QualitySettings.vSyncCount);
     }
 
     public void ChangeVolumeSlider(float volume)

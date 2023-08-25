@@ -13,6 +13,7 @@ public class Audio_Manager : MonoBehaviour
     private  AudioSource source;
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioMixerGroup sfx, music;
+    [SerializeField] private SaveModel model;
     // Start is called before the first frame update
     void Awake()
     {
@@ -95,10 +96,8 @@ public class Audio_Manager : MonoBehaviour
     }
     public void FadeMusicVolumeOut(float time)
     {
-        if(music != null)
-        {
-            music.audioMixer.DOSetFloat("musicVol",PlayerPrefs.GetFloat("musicVol"),time);
-        }
+
+        music.audioMixer.DOSetFloat("musicVol",model.musicVolume,time);
     }
 
     public void ChangeMusic(bool changeToLevelMusic = true)
@@ -112,7 +111,7 @@ public class Audio_Manager : MonoBehaviour
         {
             musicSource.clip = menuLoop;
         }
-        music.audioMixer.DOSetFloat("musicVol",PlayerPrefs.GetFloat("musicVol"),0.5f).SetDelay(2f);
+        music.audioMixer.DOSetFloat("musicVol",model.musicVolume,0.5f).SetDelay(2f);
         if(musicSource.clip != previousClip)
         {
             musicSource.Stop();

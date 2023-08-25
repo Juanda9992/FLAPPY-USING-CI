@@ -36,7 +36,7 @@ public class Fade_Canvas : MonoBehaviour
             delay = 0;
             toMainMenu =true;
         }
-        canvas.DOFade(1,0.2f).SetDelay(delay).OnComplete(()=>Scene_Loader.scene_Loader_inst.LoadScene(scene));
+        canvas.DOFade(1,0.2f).SetDelay(delay).OnComplete(()=>{Scene_Loader.scene_Loader_inst.LoadScene(scene);canvas.DOFade(0,0.3f).SetDelay(0.2f);});
         if(!scene.StartsWith("Icon"))
         {
             if(!toMainMenu)
