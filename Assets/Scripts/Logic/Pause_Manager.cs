@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pause_Manager : MonoBehaviour
 {
@@ -9,20 +10,24 @@ public class Pause_Manager : MonoBehaviour
     private bool isPaused = false; //Is the game paused?
     private float lastTimeScale; //The current Time Scale before pause, if the Time scale is different from 1 (for touching speed), it will set this float to the TimeScale
     private Game_Settings settings;
+    [SerializeField] private SaveModel saveData;
+    [SerializeField] private Slider volume, music;
     [SerializeField] private MonoBehaviour playerJump;
 
     void Start()
     {
-        settings = GameObject.FindObjectOfType<Game_Settings>();
         playerJump = GameObject.FindObjectOfType<Player_Jump>(); //The player class
+        volume.value = saveData.sfxVolume;
+        music.value = saveData.musicVolume;
+
     }
     public void PauseGame()
     {
-        
+
+        Audio_Manager.instance.FadeMusicVolumeOut(0.5f);
+
         if(isPaused)
         {
-
-            Audio_Manager.instance.FadeMusicVolumeOut(0.5f);
             isPaused = false; //Switch bool
             Time.timeScale = lastTimeScale; //Last Time scale (if you touch a speed and pause - resume the game it will keep the same timeScale)
             pausePanel.SetActive(false); //Disables the panel
@@ -30,7 +35,6 @@ public class Pause_Manager : MonoBehaviour
         }
         else
         {
-            Audio_Manager.instance.FadeMusicVolumeIn(0.5f);
             playerJump.enabled = false; //Disables the player input
             lastTimeScale = Time.timeScale;
             isPaused = true; 
@@ -54,6 +58,17 @@ public class Pause_Manager : MonoBehaviour
         {
             PauseGame();
         }    
+    }
+    public void ChangeVolumeSlider(float volume)
+    {
+        Audio_Manager.instance.ChangeVolume(volume);
+        SaveDataHolder.instance.data.sfxVolume = volume;
+    }
+
+    public void ChangeMusicSlider(float volume)
+    {
+        Audio_Manager.instance.ChangeVolume(volume,false);
+        SaveDataHolder.instance.data.musicVolume = volume;
     }
 
 }

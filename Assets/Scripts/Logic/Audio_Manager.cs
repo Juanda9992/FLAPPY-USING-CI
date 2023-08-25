@@ -95,7 +95,10 @@ public class Audio_Manager : MonoBehaviour
     }
     public void FadeMusicVolumeOut(float time)
     {
-        music.audioMixer.DOSetFloat("musicVol",PlayerPrefs.GetFloat("musicVol"),time);
+        if(music != null)
+        {
+            music.audioMixer.DOSetFloat("musicVol",PlayerPrefs.GetFloat("musicVol"),time);
+        }
     }
 
     public void ChangeMusic(bool changeToLevelMusic = true)

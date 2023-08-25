@@ -1376,7 +1376,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &395246219
@@ -2074,8 +2074,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1847239983}
-        m_TargetAssemblyTypeName: Game_Settings, ScriptFolder
+      - m_Target: {fileID: 1847239979}
+        m_TargetAssemblyTypeName: Pause_Manager, ScriptFolder
         m_MethodName: ChangeVolumeSlider
         m_Mode: 0
         m_Arguments:
@@ -3073,9 +3073,9 @@ MonoBehaviour:
   changeMenu: {fileID: 0}
   menuLoop: {fileID: 0}
   levelLoop: {fileID: 0}
-  musicSource: {fileID: 0}
-  sfx: {fileID: 24100000, guid: 820e1f993274abf48a56f8256f2de70c, type: 2}
-  music: {fileID: 24100000, guid: 31a91004ff177ca4a93758ea9f80f9a6, type: 2}
+  musicSource: {fileID: 858146975}
+  sfx: {fileID: 24300002, guid: 820e1f993274abf48a56f8256f2de70c, type: 2}
+  music: {fileID: 24300002, guid: 31a91004ff177ca4a93758ea9f80f9a6, type: 2}
 --- !u!82 &858146975
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3801,8 +3801,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1847239983}
-        m_TargetAssemblyTypeName: Game_Settings, ScriptFolder
+      - m_Target: {fileID: 1847239979}
+        m_TargetAssemblyTypeName: Pause_Manager, ScriptFolder
         m_MethodName: ChangeMusicSlider
         m_Mode: 0
         m_Arguments:
@@ -10259,7 +10259,6 @@ GameObject:
   - component: {fileID: 1847239981}
   - component: {fileID: 1847239980}
   - component: {fileID: 1847239982}
-  - component: {fileID: 1847239983}
   - component: {fileID: 1847239984}
   m_Layer: 0
   m_Name: Main
@@ -10326,6 +10325,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 2097635075}
+  saveData: {fileID: 11400000, guid: 948889f135266694c9e0ac042f6caeec, type: 2}
+  volume: {fileID: 584815742}
+  music: {fileID: 1039031301}
   playerJump: {fileID: 0}
 --- !u!114 &1847239980
 MonoBehaviour:
@@ -10363,21 +10365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc03e11e5dd46e41a4e412e48e327bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1847239983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847239975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 592aa0c9ef33bc844a8f7cb45d29cb6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sxfSlider: {fileID: 584815742}
-  musicSlider: {fileID: 1039031301}
-  vSyncToggle: {fileID: 0}
 --- !u!114 &1847239984
 MonoBehaviour:
   m_ObjectHideFlags: 0
