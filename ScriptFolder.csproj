@@ -36,7 +36,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Logic\Save_Manager.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IActivable.cs" />
      <Compile Include="Assets\Scripts\Logic\Pause_Manager.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Revert_Obstacle.cs" />
@@ -53,7 +52,6 @@
      <Compile Include="Assets\Scripts\Logic\Scene_Loader.cs" />
      <Compile Include="Assets\Scripts\Saving\SaveModel.cs" />
      <Compile Include="Assets\Scripts\Logic\Stats_Manager.cs" />
-     <Compile Include="Assets\Scripts\Logic\Stats_Handler.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Random_Points_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Enviroment\Obstacle\Gravity_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Main_Menu\UI_Animator.cs" />
