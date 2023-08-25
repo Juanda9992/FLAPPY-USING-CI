@@ -9,6 +9,7 @@ public class GameOver_UI : MonoBehaviour
     public static event onGameRestarted onRestart;
     [SerializeField]
     private RectTransform panel;
+    [SerializeField] private SaveModel saveModel;
     private Score_UI score;
     
 
@@ -21,7 +22,7 @@ public class GameOver_UI : MonoBehaviour
     private void ShowPanel()
     {
         scoreText.text = "Score: " + score.score;
-        maxScoreText.text = "Highest Score: " + PlayerPrefs.GetInt("MaxScore").ToString();
+        maxScoreText.text = "Highest Score: " + saveModel.highestScore.ToString();
         panel.DOMoveY(transform.position.y,1f).SetDelay(1f);
     }
 
